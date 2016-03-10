@@ -17,10 +17,10 @@
 	-4px 4px 2px -3px #CDCDC1,
 	4px -4px 2px -3px #CDCDC1,
 	4px 4px 2px -3px #CDCDC1;
-	width: 800px;
+	width: 1060px;
 	height: 100%;
 	background: white;
-	font-size: 12px;
+	font-size: 20px;
 }
 
 .header {
@@ -29,13 +29,13 @@
 
 .content {
 	margin: 30px 40px 40px 0px;
-	width: 65%;
+	width: 67%;
 	float: right;
 	background: white;
 }
 
 .footer {
-	margin: 0px 40px 60px 40px;
+	margin: 0px 40px 40px 40px;
 	display: block; 
 	clear: both;
 }
@@ -52,15 +52,25 @@
 	line-height: 80px;
 }
 
-.active-header-li {
+.header .menu li:hover {
 	border-left: 1px solid grey;
 	border-right: 1px solid grey;
 	background: #303030;
 }
 
-.active-sidebar-li {
+.sidebar .menu li:hover {
 	background: #E1E1E1;
 }
+
+.sidebar .menu li:hover > a{
+	padding: 0px 0px 0px 10px;
+	color: #444343;	
+}
+
+.footer .menu li:hover > a{
+	text-decoration: underline;	
+}
+
 .sidebar .menu {
 	clear: both; 
 	background: white;
@@ -74,13 +84,14 @@
 	border-bottom: 1px solid #E1E1E1;
 	border-left: 1px solid #E1E1E1;
 	border-right: 1px solid #E1E1E1;
+	padding: 8px 0px 8px 15px;
 }
 
 .content-text {
 	margin: 20px;
 	color: #444343;
-	font-size: 11.5px;
-	line-height: 15px;
+	font-size: 16px;
+	line-height: 20px;
 }
 
 .footer .menu {
@@ -93,13 +104,15 @@
 
 .menu li {
 	margin: 0px 20px;
-	padding: 5px;
+	padding: 10px 5px;
 	list-style: none;
-}
 
-.active{
-	position: relative;
-	left: 10px;
+	border-left-style: solid;
+	border-left-color: transparent;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-right-color: transparent;
+	border-right-width: 1px;
 }
 
 .horizontal li{
@@ -125,18 +138,11 @@ a {
 	color: #444343;	
 }
 
-a.active  {
-	color: #444343;	
-}
-
-a.footer-active  {
-	text-decoration: underline;	
-}
 
 img {
 	padding: 30px 50px;
 	border-radius: 2px;
-	height: 200px;
+	height: 300px;
 }
 
 .fig {
@@ -146,8 +152,15 @@ img {
    }
 
 span {
-	margin: 6px;
+	margin: 10px 6px 0px 0px;
 	float: right;
 	color: #444343;
 	text-align: center;
+}
+
+.logo img {
+	text-align: center;
+	height: 40px;
+	padding: 0;
+	margin: 10px;
 }
