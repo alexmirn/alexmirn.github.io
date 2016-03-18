@@ -1,9 +1,25 @@
-.body{
-  font-family: Arial sans-serif;
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('../fonts/helveticaneue-thin-webfont.eot');
+  src: url('../fonts/helveticaneue-thin-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/helveticaneue-thin-webfont.woff2') format('woff2'), url('../fonts/helveticaneue-thin-webfont.woff') format('woff'), url('../fonts/helveticaneue-thin-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('../fonts/helveticaneue-thin-webfont.eot');
+  src: url('../fonts/helveticaneue-thin-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/helveticaneue-thin-webfont.woff2') format('woff2'), url('../fonts/helveticaneue-thin-webfont.woff') format('woff'), url('../fonts/helveticaneue-thin-webfont.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+body{
+  font-family: "Helvetica Neue", Tahoma;
   background: #EEEEE0;
 }
 
 .page {
+  margin-top: 10px;
 }
 
 .box {
@@ -11,20 +27,18 @@
   width: 1210px;
   height: 1060px;
   background: #064e8e;
-  border: 3px solid white;
-  outline: 3px solid grey;
+  border: 2px solid white;
+  outline: 2px solid grey;
 }
 
 .content {
   clear: both;
-  /*background: url('../img/background.png');*/
+  width: 1210px;
+  height: 1015px;
   background: url('../img/pic.jpg');
   background-repeat: no-repeat;
-  width: 1210px;
-  height: 1060px;
+  background-position: center; 
   text-align: center;
-  /*margin-top: 100px;*/
-  /*padding-top: 10px;*/
 }
 
 .header{
@@ -37,19 +51,22 @@
 }
 
 .header .menu li:hover {
-  /*border-left: 1px solid grey;*/
-  /*border-right: 1px solid grey;*/
   background: #4eabda;
 }
 
+.header .menu li:hover > a{
+  background: #4eabda;
+  color: white;
+}
+
 .menu {
-  background: #064e8e;
   float: right;
+  background: #064e8e;
 }
 
 .menu li {
-  margin: 0px 20px;
-  padding: 15px 5px;
+  margin: 0px;
+  padding: 15px 15px;
   list-style: none;
   border-left-style: solid;
   border-left-color: transparent;
@@ -57,7 +74,6 @@
   border-right-style: solid;
   border-right-color: transparent;
   border-right-width: 1px;
- 
 }
 
 .right li{
@@ -84,14 +100,19 @@
 
 a {
   text-decoration: none;
-  color: white; 
+  color: #60b5ed; 
+}
+
+.header_image a {
+  color: white;
 }
 
 .all_content {
-  margin-top: 200px;
+  margin-top: 215px;
   margin-left: 350px;
   width: 560px;
-  height: 610px;
+  height: 620px;
+  position: relative;
   background: rgba(0, 0, 0, 0.5);
   color: white;
 }
@@ -110,12 +131,13 @@ a {
 
 .content_box2 {
   height: 60px;
+  margin-bottom: 10px;
 }
 
 .content_box2 p{
   padding-top: 10px;
-  font-size: 30px;
   margin-bottom: 0px;
+  font-size: 30px;
 }
 
 fieldset {
@@ -123,17 +145,22 @@ fieldset {
 }
 
 .content_borders {
+  width: 120px;  
+  margin-top: 0px;  
   border-style: solid; 
   border-width: 2px; 
   border-top-color: green; 
   border-top-color: #666666; 
-  width: 120px;  
-  margin-top: 0px;  
   color: black;
 }
 
 .content_borders_text {  
+  margin-bottom: -10px; 
   color: #666666;
+}
+
+.text_between_lines > span {
+  display: block;
 }
 
 .content_borders_left {
@@ -150,20 +177,21 @@ fieldset {
 }
 
 .left_border {
+  float:right; 
+  width: 30px; 
+  margin-right:100px; 
+  margin-top:5px;
   border-style: solid; 
   border-width: 2px; 
   border-top-color: green; 
   border-top-color: blue; 
-  width: 30px; 
-  float:right; 
-  margin-right:100px; 
-  margin-top:5px;
 }
 
 .input_field input{
   width: 275px;
   min-height: 35px;
   margin-bottom: 20px;
+  padding-left: 20px;
 }
 
 .input_checkbox{
@@ -171,10 +199,10 @@ fieldset {
 }
 
 .input_checkbox input{
-  margin-left: -35px; 
-  margin-bottom: 20px;
   width: 15px;
   height: 15px;
+  margin-left: -35px; 
+  margin-bottom: 20px;
 }
 
 .input_submit input{
@@ -185,26 +213,25 @@ fieldset {
 
 button {
   width: 275px;
-  border-radius: 5px;
-  /*margin: 10px;*/
+  border-radius: 10px;
   background: linear-gradient(to bottom, #7789b7, #2e4476);
   border-color: #7586b1;
 }
 button li {
   float: left;
   padding: 5px 7px;
-  font-size: 14px;
   color: white;
+  font-size: 14px;
 }
 button li:first-child {
+  color: white;
   text-align: center;
   text-decoration: none;
   font-size: 22px;
-  color: white;
 }
 button li:last-child {
-  border-left: 1px solid #7586b1;
   padding: 10px 30px;
+  border-left: 1px solid #7586b1;
 }
 
 input {
@@ -220,6 +247,41 @@ input:hover{
 
 .input_submit [type="submit"] {
   background: #4eabda;
-  color: white;
+  color: #cccccc;
   box-shadow: none;
 }
+
+li:nth-child(5) {
+  border-right: 1px solid #4eabda;
+}
+
+li:nth-child(6) {
+  max-height: 35px;
+  padding-bottom: 13px;
+}
+
+li:nth-child(7) {
+  color: white;
+  background: #4eabda;
+}
+
+li:nth-child(7) span > a {
+  color: white;
+  text-decoration: underline;
+}
+
+
+.register {
+  margin-top: 20px; 
+  color: #cccccc;
+}
+
+label, p {
+  color: #cccccc;
+}
+
+p {
+   font-size: 12px;
+}
+
+
