@@ -24,7 +24,7 @@ body{
 
 .box {
   margin: 0 auto;
-  width: 1210px;
+  max-width: 1910px;
   height: 1060px;
   background: #064e8e;
   border: 2px solid white;
@@ -33,12 +33,12 @@ body{
 
 .content {
   clear: both;
-  width: 1210px;
   height: 1015px;
   background: url('../img/pic.jpg');
   background-repeat: no-repeat;
   background-position: center; 
   text-align: center;
+  position: relative;
 }
 
 .header{
@@ -47,7 +47,9 @@ body{
 }
 
 .header-box {
+  margin: 0 auto;
   background: #064e8e;
+  position: relative;
 }
 
 .header .menu li:hover {
@@ -108,8 +110,7 @@ a {
 }
 
 .all_content {
-  margin-top: 215px;
-  margin-left: 350px;
+  margin: 215px auto;
   width: 560px;
   height: 620px;
   position: relative;
@@ -190,8 +191,6 @@ fieldset {
 .input_field input{
   width: 275px;
   min-height: 35px;
-  margin-bottom: 20px;
-  padding-left: 20px;
 }
 
 .input_checkbox{
@@ -250,6 +249,14 @@ input:hover{
   background: #4eabda;
   color: #cccccc;
   box-shadow: none;
+  cursor: pointer;
+}
+
+input_submit:active {
+  top: .1em;
+  left: .1em;
+  box-shadow: 0 0 0 60px rgba(100,100, 100, 0.5) inset;
+  border: 5px solid white;
 }
 
 li:nth-child(5) {
@@ -274,7 +281,7 @@ li:nth-child(7) span > a {
 
 .register {
   margin-top: 20px; 
-  color: #cccccc;
+  color: white;
 }
 
 label, p {
@@ -285,4 +292,19 @@ p {
    font-size: 12px;
 }
 
+input[type=text], input[type=email], input[type=password], textarea {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  padding: 2px 0px 2px 20px;
+  margin: 5px 1px 10px 0px;
+  color: white;
+}
+ 
+input[type=text]:focus, input[type=email]:focus, input[type=password]:focus, textarea:focus {
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  margin: 5px 1px 10px 0px;
+}
 
