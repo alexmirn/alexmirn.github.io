@@ -216,6 +216,7 @@ button {
   border-radius: 10px;
   background: linear-gradient(to bottom, #7789b7, #2e4476);
   border-color: #7586b1;
+  cursor: pointer;
 }
 button li {
   float: left;
