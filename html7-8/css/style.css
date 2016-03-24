@@ -1,4 +1,4 @@
-.wrapper{
+.wrapper1{
   background: url('../img/bg.png');
   /*background: red;*/
   background-repeat: no-repeat;
@@ -11,4 +11,45 @@ header{
   /*height: 1200px;*/
   margin: 0 auto;
   /*background: green*/
+}
+
+.logo{
+	text-align: center;
+}
+
+.menu__item {
+	display: none;
+}
+
+.menu__item:first-child {
+	display: block;
+}
+
+.menu:hover>li {
+	display: block;
+}
+
+.about-box{
+	background: purple;
+}
+
+.finish{
+	background: grey;
+	display: none;
+}
+
+.menu__item-footer{
+	float: left;
+}
+
+.menu__item-footer {
+	display: block;
+}
+
+.footer__menu{
+	display: none;
+}
+
+footer{
+	background: url('../img/footer_bg.png');
 }

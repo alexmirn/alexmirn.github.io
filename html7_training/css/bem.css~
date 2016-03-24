@@ -1,0 +1,37 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background: #999;
+}
+
+.menu{
+	font-family: Tahoma, Arial, sans-serif;
+	margin: 20px 0 20px 100px;
+}
+
+.menu__item{
+	font-size: 14px;
+	padding-left: 17px;
+	background: green;
+	list-style: none;
+}
+
+.menu__link{
+	color: #fff;
+	text-decoration: underline;
+}
+
+.menu__link:hover{
+	text-decoration: none;
+}
+
+.menu--blue .menu__item{
+		background: blue;
+}
+
+.menu--blue .menu__link{
+		color: red;
+}

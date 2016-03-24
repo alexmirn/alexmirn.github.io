@@ -1,0 +1,42 @@
+.body{
+  margin: 0;
+  padding: 0;
+}
+
+.menu{
+  position: relative;
+  overflow: hidden;
+}
+
+.menu li{
+  float: left;
+  list-style: none;
+}
+
+.menu a{
+  display: block;
+  height: 52px;
+  width: 52px;
+  background: #fff url(..img/sprite) 0 0 no-repeat;
+  transition: 0.2s all; /*- очень крутая штука - спрайты будут переплывать из состояния в состояние*/
+}
+
+.menu a:hover{
+  background-position: 0 53px;
+}
+
+.menu .twitter{
+  background-position: -53px 0;
+}
+
+.menu .twitter:hover{
+  background-position: -53px -53px;
+}
+
+.menu .share{
+  background-position: -106px 0;
+}
+
+.menu .share:hover{
+  background-position: -106px -53px;
+}
