@@ -17,15 +17,47 @@ header{
 	text-align: center;
 }
 
-.menu__item {
+.drop-menu{
+
+}
+/*говорит, что влево выстраивается только li 1-го уровня, для li вложенных в потомках не применяется!!!! */
+.drop-menu > li{
+	float: left;
+	background: grey;
+}
+
+.drop-menu li{
+	list-style: none;
+	position: relative;
+	width: 120px;
+	padding-right: 20px;
+	color: white;
+	background: grey; 
+}
+
+
+/*зачистка границ после меню*/
+/*.drop-menu:after{
+	content: '';
+	clear: both;
+	width: 100%;
+	height: 0;
+}*/
+
+.drop-menu a{
+	text-decoration: none;
+}
+
+/*top: 100% и left:0 выстраивают подменю ровно относительно пункта меню!!!!!!*/
+.drops{
 	display: none;
+	position: absolute;
+	top: 100%;
+	width: 100px;
+	left: 0;
 }
 
-.menu__item:first-child {
-	display: block;
-}
-
-.menu:hover>li {
+.drop-menu li:hover .drops{
 	display: block;
 }
 
