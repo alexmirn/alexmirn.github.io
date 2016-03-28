@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "League Gothic Regular";
+  src: url('../fonts/LeagueGothic-Regular.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body{
+
+}
 .wrapper1{
   position: relative;
   height: 515px;
@@ -35,15 +45,6 @@ header{
 .drop-menu__wrapper{
 	margin: 0 auto;
 	text-align: center;
-}
-.slider__title{
-	color: white;
-	font-size: 36px;
-}
-.slider__title2{
-	color: #edbfff;
-	text-transform: uppercase;
-	margin-bottom: 80px;
 }
 
 .drop-menu__wrapper:hover{
@@ -169,13 +170,18 @@ header{
 	margin: 0 auto;
 	padding-top: 70px;
 	clear: both;
-	width: 88%;
+	/*width: 88%;*/
 	max-width: 280px;
+	text-align: left;
+	position: relative;
 }
 
 .about-content-text{
-	margin-left: 15%;
+	margin-left: 10%;
+	width: 70%;
 	margin-bottom: 25px;
+	float: left;
+	text-align: justify;
 }
 .about-content__link{
 	float: right;
@@ -194,7 +200,7 @@ header{
   width: 27px;
   display: inline-block;
   background: url('../img/keys.png') 0 0 no-repeat;
-  margin-right: 8%;
+  /*margin-right: 8%;*/
 }
 
 .key{
@@ -242,45 +248,90 @@ header{
 	width: 70%;
 	float: left;
 }
-
+.info{
+	text-align: left;
+}
 .news{
 	position: relative;
 	margin-top: 90px;
 	margin-bottom: 55px;
 }
 
+.news__title1{
+	font-weight: 900;
+}
+.news__title2{
+	font-weight: 900;
+	color: #edbfff;
+}
 .slider{
 	clear: both;
 	padding-top: 55px;
 	padding-bottom: 55px;
 	height: 15px;
+	text-align: center;
 }
-
+.slider__title{
+	color: white;
+	font-size: 36px;
+}
+.slider__title2{
+	color: #edbfff;
+	text-transform: uppercase;
+	margin-bottom: 80px;
+}
 .sprite {
   height: 48px;
   width: 48px;
   display: inline-block;
   background: url('../img/sprite1.png') 0 0 no-repeat;
 }
-
 .ball1{
 	background-position: -0px 0;
 }
-
 .ball2{
 	background-position: -0px -49px;
 }
-
-
 .ball3{
 	background-position: -0px -97px;
 }
-
 .updates{
 	margin-bottom: 80px;
 }
-
-
+.updates__item{
+	clear: both;
+}
+.updates__list{
+	position: relative;
+	min-width: 280px;
+}
+.updates__item-container{
+	position: relative;
+	width: 100%;
+}
+.updates__img{
+	width: 20%;
+	float: left;
+	clear: both;
+}
+.updates__text-all{
+	width: 80%;
+	float: left;
+	/*display: inline-block;*/
+	/*margin-top: -20px;*/
+}
+.updates__title{
+	font-weight: 900;
+}
+.updates__text1{
+	font-weight: 900;
+}
+.updates__link{
+	text-align: right;
+	text-decoration: none;
+	font-weight: 900;
+	color: black;
+}
 .info__logos__img{
   display: inline-block;
   margin-top: 65px;
