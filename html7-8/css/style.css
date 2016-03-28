@@ -1,51 +1,136 @@
 .wrapper1{
-  background: url('../img/bg.png');
-  /*background: red;*/
-  background-repeat: no-repeat;
-  /*background-position: center;*/
   position: relative;
+  height: 515px;
+  background: url('../img/bg2.jpg');
+  background-repeat: no-repeat;
+  background-position: top center;
+  margin: 0 auto;
 }
 
 header{
-  width: 100px;
-  /*height: 1200px;*/
+  /*width: 100px;*/
   margin: 0 auto;
-  /*background: green*/
+  position: relative;
 }
 
 .logo{
 	text-align: center;
+	padding-top: 70px;
+}
+
+.nav-menu{
+	padding-top: 40px;
+	text-align: center;
+	margin: 0 auto;
+	width: 245px;
 }
 
 .drop-menu{
-
+	font-family: "League Gothic Regular", Arial, sans-serif;
+  	font-size: 24px;
+  	text-align: center;
+  	margin-left: 10%;
+  	width: 245px;
 }
-/*говорит, что влево выстраивается только li 1-го уровня, для li вложенных в потомках не применяется!!!! */
-.drop-menu > li{
-	float: left;
-	background: grey;
+.drop-menu__wrapper{
+	margin: 0 auto;
+	text-align: center;
+}
+.slider__title{
+	color: white;
+	font-size: 36px;
+}
+.slider__title2{
+	color: #edbfff;
+	text-transform: uppercase;
+	margin-bottom: 80px;
+}
+
+.drop-menu__wrapper:hover{
+  	/*border: 1px solid #0f191f;*/
 }
 
 .drop-menu li{
+  	border-left: 1px solid #0f191f;
+  	border-right: 1px solid #0f191f;
 	list-style: none;
 	position: relative;
-	width: 120px;
+	width: 245px;
 	padding-right: 20px;
 	color: white;
-	background: grey; 
+	background: #3f3247;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	/*border-left: 1px solid black;*/
 }
 
+/*говорит, что влево выстраивается только li 1-го уровня, для li вложенных в потомках не применяется!!!! */
+.drop-menu > li{
+	float: left;
+	background: #3f3247;
+  	text-transform: uppercase;
+  	border-left: 1px transparent;
+  	border-right: 1px transparent;
+}
 
 /*зачистка границ после меню*/
-/*.drop-menu:after{
+.drop-menu:after{
 	content: '';
 	clear: both;
 	width: 100%;
 	height: 0;
-}*/
+}
 
 .drop-menu a{
 	text-decoration: none;
+	color: white;
+}
+
+.drop-menu li{
+	background-color : transparent;
+	border-left: 1px solid #0f191f;
+  	border-right: 1px solid #0f191f;
+}
+
+.drop-menu >li{
+  	border-left: 1px solid transparent;
+  	border-right: 1px solid transparent;
+}
+
+.drop-menu >li:hover{
+  	border-left: 1px solid #0f191f;
+  	border-right: 1px solid #0f191f;
+}
+.drops li:last-child{
+  	border-bottom: 1px solid #0f191f;
+  	border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.drop-menu >li:hover:first-child{
+  	border-top: 1px solid #0f191f;
+  	border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.drop-menu__button li{
+	background-color : #3f3247;
+	border-bottom: 2px solid rgba(237, 191, 255, 0.1);
+}
+
+.drop-menu__button:hover{
+	background-color : #3f3247;
+	border-bottom: 2px solid #3f3247;
+}
+
+.drop-menu__button li:hover{
+	background-color : #29202f;
+	border-bottom: 2px solid #edbfff;  
+}
+
+.drop-menu__button > a{
+	/*text-decoration: underline;*/
+	border-bottom: 1px solid #edbfff;
 }
 
 /*top: 100% и left:0 выстраивают подменю ровно относительно пункта меню!!!!!!*/
@@ -54,17 +139,155 @@ header{
 	position: absolute;
 	top: 100%;
 	width: 100px;
-	left: 0;
+	left: -1px;
+	z-index: 2;
 }
 
 .drop-menu li:hover .drops{
 	display: block;
 }
 
-.about-box{
-	background: purple;
+.slider-box{
+	z-index: 0;
+	margin: 190px auto;
+	text-align: center;
 }
 
+
+
+.about-box{
+	background: linear-gradient(to top, #36293d, #745183);
+	height: 600px;
+	/*padding-top: 70px;*/
+	/*padding-left: 11%;*/
+	color: white;
+	position: relative;
+
+}
+
+.about-content{
+	margin: 0 auto;
+	padding-top: 70px;
+	clear: both;
+	width: 88%;
+	max-width: 280px;
+}
+
+.about-content-text{
+	margin-left: 15%;
+	margin-bottom: 25px;
+}
+.about-content__link{
+	float: right;
+	text-decoration: none;
+	color: white;
+	margin-bottom: 25px;
+	max-width: 280px;
+}
+.about-content__link:hover{
+	text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.8);
+}
+
+.container__mark {
+  float: left;
+  height: 30px;
+  width: 27px;
+  display: inline-block;
+  background: url('../img/keys.png') 0 0 no-repeat;
+  margin-right: 8%;
+}
+
+.key{
+	background-position: -0px 0;
+}
+
+.key:hover{
+	background-position: -0px -33px;
+}
+
+.cloud{
+	background-position: -28px 0;
+}
+
+.cloud:hover{
+	background-position: -28px -33px;
+}
+
+.melody{
+	background-position: -56px 0;
+}
+
+.melody:hover{
+	background-position: -56px -33px;
+}
+
+.info-box{
+	height: 1210px;
+	max-width: 280px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.slider-img{
+	float: left;
+	width: 20%;
+	height: 100px;
+	position: relative;
+	display: inline-block;
+}
+.photo {
+	background: url('../img/photo.png')no-repeat;
+}
+.slider-text{
+	width: 70%;
+	float: left;
+}
+
+.news{
+	position: relative;
+	margin-top: 90px;
+	margin-bottom: 55px;
+}
+
+.slider{
+	clear: both;
+	padding-top: 55px;
+	padding-bottom: 55px;
+	height: 15px;
+}
+
+.sprite {
+  height: 48px;
+  width: 48px;
+  display: inline-block;
+  background: url('../img/sprite1.png') 0 0 no-repeat;
+}
+
+.ball1{
+	background-position: -0px 0;
+}
+
+.ball2{
+	background-position: -0px -49px;
+}
+
+
+.ball3{
+	background-position: -0px -97px;
+}
+
+.updates{
+	margin-bottom: 80px;
+}
+
+
+.info__logos__img{
+  display: inline-block;
+  margin-top: 65px;
+  padding: 0 7%;
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+}
 .finish{
 	background: grey;
 	display: none;
@@ -72,16 +295,21 @@ header{
 
 .menu__item-footer{
 	float: left;
-}
-
-.menu__item-footer {
 	display: block;
 }
+
 
 .footer__menu{
 	display: none;
 }
 
 footer{
-	background: url('../img/footer_bg.png');
+	background: url('../img/footer_bg.png') no-repeat;
+	height: 100px;
+	text-align: center;
+	color: white;
+}
+
+.footer-text{
+	padding-top: 40px;
 }
