@@ -10,7 +10,7 @@ body{
 }
 .wrapper1{
   position: relative;
-  height: 515px;
+  height: 516px;
   background: url('../img/bg2.jpg');
   background-repeat: no-repeat;
   background-position: top center;
@@ -147,16 +147,74 @@ header{
 }
 
 .slider-box{
-	z-index: 0;
-	margin: 190px auto;
-	text-align: center;
 	font-family: "League Gothic Regular", Arial, sans-serif;
+	/*font-size: 60px;*/
+	text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+	z-index: 0;
+	margin: 160px auto;
+	text-align: center;
+}
+
+.slider__item{
+	margin: 0 auto;
+	text-align: center;
+	position: relative;
+	width: 320px;
+}
+.sprite-arrow {
+	margin-top: 13px;
+    display: block;
+    width: 22px;
+    height: 34px;
+    background-image: url('../img/spritesheet.png');
+    background-repeat: no-repeat;
 }
 
 
+.sprite-left-arrow {
+    background-position: -5px -5px;
+    float: left;
+	width: 7%;
+}
+
+.sprite-left-arrow:hover {
+    background-position: -37px -5px;
+}
+
+.sprite-right-arrow {
+    background-position: -69px -5px;
+    float: right;
+	width: 7%;
+}
+
+.sprite-right-arrow:hover {
+    background-position: -101px -5px;
+}
+.slider__titles{
+	text-align: left;
+	float: left;
+	width: 70%;
+	margin-left: 13%;
+	margin-top: -5px;
+}
+.slider__title{
+	color: white;
+	font-size: 36px;
+	line-height: 45px;
+	font-weight: 300px;
+
+}
+.slider__title2{
+	color: #edbfff;
+	text-transform: uppercase;
+	margin-bottom: 80px;
+	font-size: 18px;
+}
 
 .about-box{
+	clear: both;
 	background: linear-gradient(to top, #36293d, #745183);
+	border-top: 1px solid black;
 	height: 600px;
 	/*padding-top: 70px;*/
 	/*padding-left: 11%;*/
@@ -176,11 +234,19 @@ header{
 }
 
 .about-content-text{
-	margin-left: 10%;
+	margin-left: 8%;
 	width: 70%;
 	margin-bottom: 25px;
 	float: left;
-	text-align: justify;
+	text-align: left;
+}
+.about-content__title{
+	font-family: "League Gothic Regular", Arial, sans-serif;
+	font-size: 25px;
+  	color: #fff;
+  	text-align: left;
+  	text-transform: uppercase;
+  	text-shadow: 0px 1px 0px rgba(15, 21, 24, 0.004);
 }
 .about-content__link{
 	float: right;
@@ -199,6 +265,8 @@ header{
   width: 27px;
   display: inline-block;
   background: url('../img/keys.png') 0 0 no-repeat;
+  margin-left: 5%;
+  margin-top: 1%;
   /*margin-right: 8%;*/
 }
 
@@ -269,15 +337,6 @@ header{
 	padding-bottom: 55px;
 	height: 15px;
 	text-align: center;
-}
-.slider__title{
-	color: white;
-	font-size: 36px;
-}
-.slider__title2{
-	color: #edbfff;
-	text-transform: uppercase;
-	margin-bottom: 80px;
 }
 .sprite {
   height: 48px;
@@ -354,8 +413,9 @@ header{
 }
 
 footer{
-	background: url('../img/footer_bg.png') no-repeat;
-	height: 100px;
+	background: url('../img/back.jpg') no-repeat;
+	background-position: bottom center;
+	height: 200px;
 	text-align: center;
 	color: white;
 }
