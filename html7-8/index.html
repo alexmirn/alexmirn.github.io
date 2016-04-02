@@ -6,6 +6,7 @@
 
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media-queries.css"/>
 </head>
 <body>
  <div class="wrapper1">
@@ -14,7 +15,25 @@
      	<img src="img/pingbuller.png" alt="HER">
      </div>
      <nav class="nav-menu">
-      <div class="drop-menu__wrapper">
+        <ul class="menu">
+            <li class="menu__item">
+              <a href="#" class="menu__link">home</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">about</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">blog</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">products</a>
+            <li class="menu__item">
+              <a href="#" class="menu__link">lorem ipsum</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">dolor sit amet</a>
+            </li>
+          </ul>
        	<ul class="drop-menu">
        		<li class="drop-menu__button">
        			<a href="#" class="menu__link">home</a>
@@ -37,28 +56,34 @@
             </ul>  
           </li>
        	</ul>
-      </div>
      </nav> 
    </header>
    <section class="slider-box">
-   	<div class="slider__item">
-   		<!-- <img src="img/left-arrow.png" alt="" class="slider__slider-img"> -->
-      <div class="sprite-arrow sprite-left-arrow">
+    <div class="slider-bg">
+     	<div class="slider__item">
+     		<!-- <img src="img/left-arrow.png" alt="" class="slider__slider-img"> -->
+        <div class="sprite-arrow sprite-left-arrow">
+        </div>
+        <div class="slider__titles">
+          <p class="slider__title">
+            Lorem Ipsum Dolor
+          </p>
+          <p class="slider__title2">
+            It will make all of your dreams come
+          </p>
+          <p class="slider__item__text">Semper sollicitudin gravida eget, vestibulum sit amet sapien. Nunc dignissim tincidunt est, et auctor turpis ornare a. Nam venenatis hendrerit est at volutpat. Morbi elementum euismod lacus id semper. In odio nunc,
+                  imperdiet eget aliquam quis, euismod id lectus. Nulla interdum arcu et felis aliquam a tempus lectus lobortis.</p>
+        </div>
+        <div class="sprite-arrow sprite-right-arrow">
+        </div>
+        <img class="slider__img" src="img/phone.png" alt="phone">
       </div>
-      <div class="slider__titles">
-        <p class="slider__title">
-          Lorem Ipsum Dolor
-        </p>
-        <p class="slider__title2">
-          It will make all of your dreams come
-        </p>
-      </div>
-      <div class="sprite-arrow sprite-right-arrow">
-      </div>
-      <img src="img/slider.png" alt="" class="slider__slider-img">
-   	</div>
-  </div> 
+    </div>
    </section>
+        <div class="slider__slider-img">
+          <img src="img/slider.png" alt="" class="">
+        </div>
+  </div> 
    <section class="about-box">
    		<div class="about-content">
    			<div class="container__mark key"></div>
@@ -67,7 +92,7 @@
      				ABOUT OUR COMPANY
      			</p>
      			<p class="about-content__text">
-     				Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus
+     				Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam
      			</p>
         </div>
    			<a class="about-content__link" href="#">READ MORE</a>
@@ -80,7 +105,7 @@
             ABOUT OUR COMPANY
           </p>
           <p class="about-content__text">
-            Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus
+            Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam
           </p>
         </div>
         <a class="about-content__link" href="#">READ MORE</a>
@@ -93,7 +118,7 @@
             ABOUT OUR COMPANY
           </p>
           <p class="about-content__text">
-            Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus 
+            Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam 
           </p>
         </div>
         <a class="about-content__link" href="#">READ MORE</a>
@@ -107,65 +132,60 @@
         <div class="slider-text">
      			<p class="news__title1">
             PINGBULLER
+          <span class="news__title1 news__title2">STARTS HERE</span>
           </p>
-          <p class="news__title1 news__title2">STARTS HERE</p>
      			<p class="news__text">
-     				“Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae
+     				“Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar urna risus, mattis pulvinar
+                  bibendum in, venenatis quis neque. Mauris nec metus ultricies erat consequat dignissim non eu nisl.”
      			</p>
         </div>
    		</aside>
-   		<div class="slider">
+   		<!-- <div class="slider">
         <img src="img/slider1.png" alt="">
-      </div>
+      </div> -->
    		<aside class="updates">
    			<p class="updates__title">
    				RECENT UPDATES
    			</p>
         <ul class="updates__list">
           <li class="updates__item">
-            <div class="updates__item-container">
               <div class="updates__img">
                 <span class="sprite ball1"></span>
   		   			</div>
               <div class="updates__text-all">
-                <p class="updates__text1">
-    		   				Nunc turpis neque feugiat eget
+                <p class="updates__text updates__text-bold">
+    		   				Nunc turpis neque
     		   			</p>
-    		   			<p class="updates__text2">
+    		   			<p class="updates__text">
                   Posted by Admin on March 13
     		   			</p>
               </div>
-            </div>
    				</li>
-   				<li class="updates__item">
-            <div class="updates__item-container">
+          <li class="updates__item">
               <div class="updates__img">
                 <span class="sprite ball2"></span>
               </div>
               <div class="updates__text-all">
-                <p class="updates__text1">
-                  Nunc turpis neque feugiat eget
+                <p class="updates__text updates__text-bold">
+                  Nunc turpis neque
                 </p>
-                <p class="updates__text2">
+                <p class="updates__text">
                   Posted by Admin on March 13
                 </p>
               </div>
-            </div>
           </li>
-   				<li class="updates__item">
-            <div class="updates__item-container">
+          <li class="updates__item">
               <div class="updates__img">
                 <span class="sprite ball3"></span>
               </div>
               <div class="updates__text-all">
-                <p class="updates__text1">
-                  Nunc turpis neque feugiat eget
+                <p class="updates__text updates__text-bold">
+                  Nunc turpis neque
                 </p>
-                <p class="updates__text2">
+                <p class="updates__text">
                   Posted by Admin on March 13
                 </p>
               </div>
-            </div>
           </li>
    			</ul>
         <div class="updates__link">
@@ -177,7 +197,7 @@
         <img class="info__logos__img" src="img/logo2.png" alt="logo2"/>
         <img class="info__logos__img" src="img/logo3.png" alt="logo3"/>
         <img class="info__logos__img" src="img/logo4.png" alt="logo4"/>
-        <img class="info__logos__img" src="img/logo5.png" alt="logo5"/>
+        <img class="info__logos__img-long" src="img/logo5.png" alt="logo5"/>
         <img class="info__logos__img" src="img/logo6.png" alt="logo6"/>
       </div>
    	</div>
@@ -234,7 +254,8 @@
      	</ul>
      </nav>
      <p class="footer-text">
-     	Designed by Pingbull AS
+     	Designed by 
+      <span class="footer__item--bold">Pingbull AS</span>
      </p>
    </footer>
 </body>
