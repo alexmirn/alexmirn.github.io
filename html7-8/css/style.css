@@ -428,11 +428,13 @@ header{
 .updates{
 	margin-bottom: 80px;
 	position: relative;
+	margin-top: 12%;
 }
 .updates__list{
 	clear: both;
 	position: relative;
-	min-width: 280px;
+	width: 100%;
+	max-width: 100%;
 }
 .updates__item{
 	margin-top: 16px;
