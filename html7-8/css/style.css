@@ -221,6 +221,9 @@ header{
 	margin-bottom: 80px;
 	font-size: 18px;
 }
+.slider_title2-span{
+	display: none;
+}
 .slider__item__text{
 	display: none;
 	font-family: "OpenSans Light", Arial, sans-serif;
@@ -474,6 +477,8 @@ header{
   	text-align: left;
   	text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
   	line-height: 25px;
+  	max-height: 2px;
+    overflow: hidden;
 }
 .updates__text-bold{
 	font-family: "OpenSans Extra-bold", Arial, sans-serif;
@@ -529,6 +534,17 @@ header{
   letter-spacing: -0.1px;
   text-align: left;
   text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
+}
+.list__text--italic{
+	display: none;
+	line-height: 1.4;
+  font-family: Georgia, serif;
+  font-style: italic;
+  color: #c5c5c5;
+}
+.list__title--color{
+	display: none;
+	color: #b9b9b9;
 }
 footer{
 	background: url('../img/back.jpg') no-repeat;
