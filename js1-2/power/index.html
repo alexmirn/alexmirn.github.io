@@ -17,7 +17,7 @@
 
       if (number < 0) {
         number = -number;
-        positiveResult = checkPositiveResult();
+        positiveResult = checkPositiveResult(power);
       }
 
       result = calculateResult(number, power);
@@ -29,7 +29,7 @@
       console.log('result = ', result);
     }
 
-    function checkPositiveResult() {
+    function checkPositiveResult(power) {
       var positiveResult = true;
 
       if ( (power%2 == 1) || (power%2 == -1) ) {
