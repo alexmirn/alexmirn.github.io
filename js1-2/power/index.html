@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Степень числа</title>
+</head>
+<body>
+  <script type="text/javascript">
+    var number = prompt('Введите число');
+    var power = prompt('Введите степень');
+
+    pow(number, power);
+
+    function pow(number, power) {
+      var result;
+      var positiveResult = true;
+
+      if (number < 0) {
+        number = -number;
+        positiveResult = checkPositiveResult(power);
+      }
+
+      result = calculateResult(number, power);
+
+      if (!positiveResult) {
+        result = -result;
+      }
+
+      console.log('result = ', result);
+    }
+
+    function checkPositiveResult(power) {
+      var positiveResult = true;
+
+      if ( (power%2 == 1) || (power%2 == -1) ) {
+          positiveResult = false;
+      }
+
+      return positiveResult;
+    }
+    
+    function calculateResult(number, power) {
+      var result;
+
+      if (power >= 0) {
+        result = 1;
+        for (var i = 0; i < power; i++) {
+          result *= number;
+        }
+      } else {
+        result = number;
+        power = - power;
+        for (var i = 0; i < power; i++) {
+          result /= 10;
+        }
+      }
+
+      return result;
+    }
+  </script>
+</body>
+</html>
