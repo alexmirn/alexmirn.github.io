@@ -59,7 +59,7 @@ function Timer() {
 			totalTime = hours + ':' + minutes + ':00';
 			totalTime = checkUnit(hours) + ':' + checkUnit(minutes) + ':00';
 			seconds = 0;
-		} else if (hours < 60) {
+		} else if (hours < 24) {
 			hours += 1;
 			seconds = 0;
 			minutes = 0;
