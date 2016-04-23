@@ -5,7 +5,6 @@
     <title>ДЗ html1</title>
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-
   </head>
 
   <body>
@@ -70,64 +69,19 @@
               <li class="basket">
                 <figcaption class="sec_capt">
                   <img src="img/korzina.png" alt="korzina"/>
-                  <span>товаров:</span><span class="basket-color">0</span><span>на сумму:</span><span class="basket-color">0,00 грн.</span>
+                  <span class="basket__text">товаров:</span>
+                  <span class="basket__text basket-color">0</span>
+                  <span class="basket__text">на сумму:</span>
+                  <span class="basket__text basket-color">0,00 грн.</span>
                 </figcaption>
               </li>
               
           </ul>
       </div>
 
-
-      <section class="forms3"></section>
+      <section class="forms3 clearfix"></section>
 
       <main class="clearfix">
-        <div class="brend">
-          <figcaption class="main_capt2">
-            <img src="img/copy.png" alt="copy sign"/>
-            <span>бренды:</span>
-          </figcaption>
-          <figcaption class="sec_capt">
-            <img src="img/mark.png" alt="mark sign"/>
-            <span>шины</span>
-          </figcaption>
-          <form class="shiny" action="#" method="post">
-            <div>
-              <input type="checkbox" id="brend">
-              <label for="brend">Бренд 1</label>
-            </div>
-            <div>
-              <input type="checkbox" id="brend">
-              <label for="brend">Бренд 2</label>
-            </div>
-            <div>
-              <input type="checkbox" id="brend">
-              <label for="brend">Бренд 3</label>
-            </div>
-          </form>
-          <figcaption class="sec_capt">
-            <img src="img/mark.png" alt="mark sign"/>
-            <span>диски</span>
-          </figcaption>
-          <form class="disk" action="#" method="post">
-            <div>
-              <input type="checkbox" id="brend">
-              <label for="brend">Бренд 1</label>
-            </div>
-            <div>
-              <input type="checkbox" id="brend">
-              <label for="brend">Бренд 2</label>
-            </div>
-            <div>
-              <input type="checkbox" id="brend">
-              <label for="brend">Бренд 3</label>
-            </div>
-            <div>
-              <button type="submit">выбрать</button>
-            </div>
-          </form>
-        </div>
-
-
         <div class="catalogue">
           <figcaption class="main_capt1">
                 <img src="img/copy.png" alt="copy sign"/>
@@ -139,7 +93,7 @@
           </figcaption>
           <ul>
             <li>
-              <a href="#">Наименование 1</a>
+              <a class="#"href="#">Наименование 1</a>
             </li>
             <li>
               <a href="#">Наименование 2</a>
@@ -252,17 +206,62 @@
           </div>
         </div>
 
-        
+        <div class="brend">
+          <figcaption class="main_capt1">
+            <img src="img/copy.png" alt="copy sign"/>
+            <span>бренды:</span>
+          </figcaption>
+          <figcaption class="brend_capt">
+            <img src="img/mark.png" alt="mark sign"/>
+            <span>шины</span>
+          </figcaption>
+          <form class="shiny" action="#" method="post">
+            <div>
+              <input type="checkbox" id="brend">
+              <label for="brend">Бренд 1</label>
+            </div>
+            <div>
+              <input type="checkbox" id="brend">
+              <label for="brend">Бренд 2</label>
+            </div>
+            <div>
+              <input type="checkbox" id="brend">
+              <label for="brend">Бренд 3</label>
+            </div>
+          </form>
+          <figcaption class="brend_capt">
+            <img src="img/mark.png" alt="mark sign"/>
+            <span>диски</span>
+          </figcaption>
+          <form class="disk" action="#" method="post">
+            <div>
+              <input type="checkbox" id="brend">
+              <label for="brend">Бренд 1</label>
+            </div>
+            <div>
+              <input type="checkbox" id="brend">
+              <label for="brend">Бренд 2</label>
+            </div>
+            <div>
+              <input type="checkbox" id="brend">
+              <label for="brend">Бренд 3</label>
+            </div>
+            <div>
+              <button type="submit">выбрать</button>
+            </div>
+          </form>
+        </div>
+
       </main>
       <figure class="logos clearfix">
         <img src="img/logo.png" alt="logos" />
       </figure>  
       <footer>
         <ul class="menu clearfix horizontal footer-menu">
-          <li><a href="">О КОМПАНИ</a></li>
-          <li><a href="">ДОСТАВКА</a></li>
-          <li><a href="">СТАТЬИ</a></li>
-          <li><a href="">КОНТАКТЫ</a></li>
+          <li><a href="">О компании</a></li>
+          <li><a href="">Доставка</a></li>
+          <li><a href="">Статьи</a></li>
+          <li><a href="">Контакты</a></li>
         </ul>
           <p class="footer-text">Создание сайта &copy; Global Vision</p>
       </footer>
