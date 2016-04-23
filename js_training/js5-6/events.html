@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div class="wrapper">
+		<ul>
+			<!-- // это старый дедовский способ -->
+			<!-- <li><a href="#" onclick="console.log('preved, Lesha!');">click me</a></li> -->
+			<li><a href="#">click me</a></li>
+		</ul>
+	</div>
+	<script type="text/javascript">
+	// второй способ, им почти не пользуются
+	var elem = document.querySelector('a');
+	var elemFather = document.querySelector('li');
+	// elem.onclick = function() {
+	// 	console.log('Eto ti?');
+	// }
+
+	// самый правильный способ
+	// var elem = document.querySelector('a');
+	// elem.addEventListener('click', function(){
+	// 	console.log('Tret`iy sposob');
+	// });
+	
+	// обработчик без event
+	// function handler() {
+	// 	console.log('work with handler');
+	// }
+	// обработчик c event(передается по умолчанию)
+	function handler(event) {
+		console.log('event ', event.target);
+	}
+
+	// отец отреагирует, если произойдет изменение в ребенке
+	function handlerFather(event) {
+		console.log('father event ', event.target);
+
+	}
+	event.keyCode - код нажатой клавиши
+	event.clientX - клик пикселя по-горизонтали
+	event.clientY - клик пикселя по-вертикали
+	event.target - узнать DOM элемент, сгенерировавший событие
+	event.preventDefault() - отменить действие по-умолчанию(например, переход по ссылке)
+	event.stopPropagation() - останавливает распространение элемента к родительским обработчикам событий
+
+	// в старых браузерах preventDefault заменяли функцией
+	// elem.onclick = function	(event) {
+	// 	return false;
+	// }
+
+	// !!!!!!! передается имя функции БЕЗ СКОБОК!!! чтобы все выполнилось не сразу, а по клику 
+	elem.addEventListener('click', handler);
+	elemFather.addEventListener('click', handlerFather);
+	elem.addEventListener('click', handler, true); - при этом сначала отображается обработчик родителя, потом - ребенка
+
+	// elem.removeEventListener('click', handler); - удалить обработчик событий(callback-и могут съедать много памяти)
+
+	// обработчик событий для IE8
+	// elem.attachEvent('onclick', handler);	
+	// elem.detachEvent('onclick', handler);
+
+	// код, для кросбраузерной обработки событий
+	// function addEvent(el, event, callback) {
+	// 	if (window.attachEvent) {
+	// 		el.attachEvent('on' + event, callback);
+	// 	} else {
+	// 		el.addEventListener(event, callback);
+	// 	}
+	// }
+
+	// addEvent(elem, 'click', handler);
+
+	// реакция на любой клик
+	// window.addEventListener('click', handler);	
+	// реакция на нажатие любой клавиши
+	// window.addEventListener('keydown', handler);	
+	</script>
+</body>
+</html>

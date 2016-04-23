@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div class="wrapper">
+		
+	</div>
+	<script type="text/javascript">
+	var obj = new Object();
+	var obj = {};
+	var arr = new Array(1, 'word');
+	var arr = [1, 'word'];
+	var str = new String('alex_string');
+	var str = 'alex_string';
+
+	function Animal(name, color) {
+		// чтобы не было проблем с вложенными объектами
+		var self = this;
+		// внутренняя переменная, доступная только в классе
+		var internalVariable = 'I am internal';
+
+		self.name = name;
+		self.color = color;
+		self.woof = function() {
+			console.log('I am public method');
+			// корявая реализация приватных методов
+			self._woof();
+		}
+		self._woof = function() {
+			console.log('woof-woof');
+		}
+	}
+
+	var dog = new Animal('Aza', 'foxy');
+	dog.woof();
+
+	</script>
+</body>
+</html>
