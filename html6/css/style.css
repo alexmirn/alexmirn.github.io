@@ -129,7 +129,7 @@ nav li {
 }
 .menu li {
   margin: 0px 0px;
-  padding: 6px 15px;
+  padding: 6px 13px;
   list-style: none;
   border-left-style: solid;
   border-left-color: transparent;
@@ -149,7 +149,7 @@ nav li {
 .menu .basket{
    padding-top: 5px;
    padding-bottom: 7px;
-   padding-left: 50px;
+   padding-left: 15px;
 }
 .basket {
   float: right;
@@ -224,7 +224,7 @@ border-radius: 20px;
 .main_capt1 span {
   display: block;
   margin: -22px 0 0 25px;
-  font-size: 13px;
+  font-size: 12.4px;
   text-transform: uppercase;
   color: #114165;
   font-family: "Lucida Sans Unicode Regular", sans-serif;
@@ -399,7 +399,7 @@ footer a:hover {
 }
 .footer-menu {
   margin: 0 auto;
-  max-width: 331px;
+  max-width: 350px;
   padding: 10px 8px 1px 5px;
   border-radius: none;
   border-color: transparent;
