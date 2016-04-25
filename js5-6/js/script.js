@@ -18,7 +18,9 @@ function startPauseHandler() {
     } else if (!timer.stop) {
     	timer.stop = true;
     	clearInterval(msTimer);
+    	startPause.innerHTML = 'Continue';
     } else {
+    	startPause.innerHTML = 'Pause';
     	timer.stop = false;
     	msTimer = setInterval(timer.milisecondsCounter, 9);
 
