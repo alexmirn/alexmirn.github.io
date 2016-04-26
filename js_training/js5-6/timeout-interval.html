@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script type="text/javascript">
+	var counter = 0; 
+
+	function myTimeout() {
+		console.log('counter = ', counter);
+		counter ++;
+		if (counter === 5) {
+			clearTimeout(timerId);
+		}
+	}
+
+	// var timerId = setTimeout(myTimeout, 500);
+	var timerId = setInterval(myTimeout, 500);
+	
+	</script>
+</body>
+</html>
