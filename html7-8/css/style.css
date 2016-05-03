@@ -330,19 +330,19 @@ header{
 	background-position: -0px 0;
 }
 .key:hover{
-	background-position: -0px -33px;
+	background-position: -0px -32px;
 }
 .cloud{
-	background-position: -28px 0;
+	background-position: -26px 0;
 }
 .cloud:hover{
-	background-position: -28px -33px;
+	background-position: -26px -32px;
 }
 .melody{
 	background-position: -56px 0;
 }
 .melody:hover{
-	background-position: -56px -33px;
+	background-position: -56px -32px;
 }
 .slider-img{
 	float: left;
@@ -357,10 +357,14 @@ header{
 .slider-text{
 	width: 70%;
 	float: left;
-  	padding-left: 1%;
+  	padding-left: 20%;
 }
 .info{
 	text-align: left;
+}
+.slider1{
+	padding-left: 100px;
+    padding-top: 240px
 }
 .info-box{
 	clear: both;
@@ -370,11 +374,13 @@ header{
 	margin: 0 auto;
 	padding-top: 1px;
 	padding-bottom: 1px;
+	background-color: #f9f9f9;
 }
 .news{
 	position: relative;
 	margin-top: 90px;
-	margin-bottom: 55px;
+	margin-bottom: 25px;
+	background: url('../img/news.png') 0 0 no-repeat;
 }
 .news__text {
   width: 97%;
@@ -499,6 +505,7 @@ header{
 }
 .info__logos{
 	margin-top: 165px;
+	border-top: 1px solid #e6e6e6;
 }
 .info__logos__img{
   display: inline-block;
@@ -510,7 +517,9 @@ header{
 }
 .finish{
 	margin: 0 auto;
+	border-top: 1px solid #e6e6e6;
 	display: none;
+	background-color: #ececec;
 }
 .list__title {
   font-family: "League Gothic Regular", Arial, sans-serif;
@@ -571,4 +580,8 @@ footer{
 }
 .footer-text{
 	padding-top: 40px;
+	padding-right: 20px;
+	float: right;
+	font-family: "OpenSans Light", Arial, sans-serif;
+	font-size: 12px;
 }
