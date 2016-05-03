@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Call-Apply</title>
+</head>
+<body>
+	<script>
+	// function calculateMoney(a, b) {
+	// 	console.log(this);
+	// 	console.log('I am ' + this.firstName + ' ' + this.lastName + ' with ' + (a+b) + ' dollars');
+	// }
+
+	// var context = {firstName: 'Alex', lastName: 'Myrnyy'};
+
+	// calculateMoney(20, 30);
+	// calculateMoney.call(context, 20, 30);
+
+function printArguments() {
+	var args = [].slice.call(arguments);
+	console.log('arguments: ', arguments);
+	args.push('test');
+	console.log(args);
+}
+printArguments(1, 2, 3);
+
+	</script>
+</body>
+</html>

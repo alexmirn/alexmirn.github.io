@@ -252,16 +252,14 @@
     padding-right: 4%;
 }
 }
-@media (min-width:960px) and (max-width:2010px) {
-	.wrapper1{
-  height: 846px;
-  margin: 0 auto;
+@media (min-width:960px) {
+.wrapper1{
+ 	max-width: 960px;
+  	height: 846px;
+  	margin: 0 auto;
 }
 header{
-	display: inline-block;
-	width: 100%;
 	position: relative;
-	/*height: 846px;*/
 }
 .sprite-arrow{
 	display: none;
@@ -359,12 +357,14 @@ font-family: "League Gothic Regular", Arial, sans-serif;
 	width: 3%;
 }
 .about-box{
+	margin: 0 auto;
+	max-width: 960px;
 	height: 270px;
 	padding-left: 0%;
 }
 .about-content{
 	padding-top: 0.5%;
-	max-width: 320px;
+	max-width: 317px;
 	text-align: center;
 	display: inline-block;
 	max-height: 180px;
@@ -455,6 +455,10 @@ font-family: "League Gothic Regular", Arial, sans-serif;
 }
 .list__title--color{
 	display: inline;
+}
+footer{
+	max-width: 960px;
+	margin: 0 auto;
 }
 .footer__menu{
 	display: block;
