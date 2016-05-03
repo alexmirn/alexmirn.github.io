@@ -248,6 +248,8 @@ footer{
 .news{
 	float: left;
 	width: 40%;
+	height: 300px;
+	overflow: hidden;
 }
 .updates{
 	float: right;
