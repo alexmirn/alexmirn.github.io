@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/submenu.css">
+</head>
+<body>
+	<ul class="menu">
+		<li>
+			<a href="">some next</a>
+			<ul class="submenu">
+				<li><a href="">some submenu text</a></li>
+				<li><a href="">some submenu text</a></li>
+				<li><a href="">some submenu text</a></li>
+				<li><a href="">some submenu text</a></li>
+			</ul>
+		</li>
+	</ul>
+	<ul class="menu">
+		<li>
+			<a href="">some next</a>
+			<ul class="submenu">
+				<li><a href="">some submenu text</a></li>
+				<li><a href="">some submenu text</a></li>
+				<li><a href="">some submenu text</a></li>
+				<li><a href="">some submenu text</a></li>
+			</ul>
+		</li>
+	</ul>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js">
+	<script type="text/javascript">
+		$(function() {
+			var $links = $('.menu a');
+
+			$links.on('click', function(e){
+				var $submenu = $(this).siblings('.submenu');
+				e.preventDefault();
+				console.log('$submenu ', $submenu);
+				$submenu.slideToggle(); // показывается и закрывается анимировано
+				// $submenu.toggle(); // показывается и закрывается
+				// $submenu.show();
+				// $submenu.css('display', 'block'); // фактически тоже, что и $submenu.show()
+			}); 
+		});
+
+		window.onbeforeunload = function() {
+  			return "Данные не сохранены. Точно перейти?";
+		};
+	</script>
+</body>
+</html>

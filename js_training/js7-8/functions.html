@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+
+
+// --------- Замыкания ------------
+// function calculateLength(r) {
+// 	//Lexical Environment = {PI: 3.14, length: undefined....}
+// 	// сначала переменная ищется в LE, а потом на уровень выше вплоть до глобального scope
+// 	// каждый вложенный LE имеет доступ к вышестоящему через Lexical_Environment.[[Scope]]
+// 	var PI = 3.14;
+// 	var length = 2 * PI * r;
+// }
+
+
+// // Замыкание - это лексическое окружение + ссылка на внешнее лексическое окружение
+// // Функция доступна только в своем scope(например, функция вложенная в функцию не будет видна в window)
+// Первый пример замыкания
+// function createCounter() {
+// 	var count = 1;
+// 	return function() {
+// 		return count++;
+// 	}
+// }
+// var newCounter = createCounter();
+// var newCounter2 = createCounter(); // это другой счетчик, никак не сязанный с предыдущим
+// newCounter();
+// newCounter();
+// console.log(newCounter()); // результат 3!!!
+
+// Второй пример замыкания
+// Immediately invoked function expression - моментально вызываемая функция
+// (function(num){
+// 	var abc = 5; // переменная не за соряет глобальны scope
+// 	console.log('test' + num);
+// })(100);
+
+// третий пример замыкания
+// опять моментально вызываемая фукция
+var shop = (function(){
+	var appleAmount = 100; // недоступна вне функции!!!
+	function privateMethod() {} // недоступна вне функции, т.к. ее нет в return!!!
+	function getTotalAmount() {
+		return appleAmount;
+	}
+	function sellApples(amount) {
+		appleAmount -= amount;
+	}
+	function buyApples(amount) {
+		appleAmount += amount;
+	}
+	function getApples() {
+		return appleAmount;
+	}
+	function setApples(n) {
+		appleAmount = n;
+	}
+	return {
+		get: getApples, // геттер, 1-ое внешнее название, второе - внутреннее
+		setApples: setApples, // сеттер
+		sellApples: sellApples, // только эти методы будут доступны пользователю!!!
+		buyApples: buyApples,
+		getTotalAmount: getTotalAmount
+	};
+})();
+shop.sellApples(12);
+console.log(shop.get()); // результат будет 88
+console.log(shop.getTotalAmount()); // результат будет 88
+
+// -----ТИПЫ ФУНКЦИЙ--------
+	//  console.log(doubling) // даст undefined, doubling инициализируется при втором пробеге
+	//  doubling(2); // получим ошибку, doubling is not a function
+	//  // function expression используется, когда в зависимости 
+	//  // от результата нужны разные функции по одному и тому же имени 
+	//  var doubling = function triple(a) {
+	//  	console.log(a*3);
+	//  }
+	// doubling(2); // сработает
+
+	// triple(4); // работает
+	//  // function declaration
+	//  function triple(a) {
+	//  	console.log(a*3);
+	//  }
+	// triple(4); // работает
+
+	// // анонимная функция(пример)
+	// element.addEventListener('click', function() {
+	// 	alert('I am anonymous!');
+	// })
+
+	// // new function, где a - аргумент функции
+	// var doubleNew = new Function('a', 'console.log(a*2)');
+	// doubleNew(5);
+
+
+	</script>
+</body>
+</html>

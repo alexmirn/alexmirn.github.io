@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div class="wrapper">
+		<p>ololo</p>
+	</div>
+
+	<script type="text/javascript">
+// подключается через cdn или скачивается, например google cdn jquery
+// обращаться jQuery или $
+// console.log(jQuery);
+// Sizzle - движок, позволяющий по css-селектору искать DOM элемент
+// chaining - цепочка вызовов
+// ждет полной загрузки DOM 
+// старый вариант
+$(document).ready(function(){
+	console.log('DOM is loaded');
+	// аналог document.querySelectorAll
+	console.log($('.wrapper'));
+	console.log($('.wrapper')[0]); // получение только чистого элемента DOM
+	var $element = $('.wrapper'); // так принято называть переменные
+	var $paragraph = $element.find('p'); // найти p во wrapper-е
+	var $paragraph = $element.parent(); // найти родителя
+	$paragraph.addClass('myClass'); // добавить css класс
+	$element.removeClass('wrapper'); // убрать css класс
+	$element.remove(); // просто удалить элемент
+	$paragraph.css('color', 'blue'); // добавить css свойство
+	$paragraph.css({
+		color: 'blue',
+		background: 'green'
+	}); // добавить css объект
+	$paragraph.attr('href', 'http://google.com/'); // добавить аттрибут
+	// цепочка вызовов(достуна, поскольку после каждого вызова возвращается объект $paragraph)
+	$paragraph
+	.css('color', 'blue')
+	.attr('href', 'http://google.com/');
+	$('body').append('<div>test</div>'); // добавить элемент на лету
+
+	$paragraph.on('click dblclick', function(){ // обработчик событий, болееправильная запись(может быть не один)
+		alert('Click na letu');
+	});
+	$paragraph.click(function(){ // то же, что и выше, обработчик событий
+		alert('Click na letu');
+	});
+	$paragraph.off... // обработчик событий на выключение
+	$paragraph.one... // одноразовый обработчик событий
+
+	$paragraph.hover(
+		function(){console.log('hover in');},
+		// или прикольная фича function(){$this.hide();},
+		function(){console.log('hover out');}
+	);
+});
+
+// новый вариант
+$(function(){
+
+});
+// когда jQuery ищет DOM элемент, она возвращает не его, а jQuery коллекцию
+
+// animation принимает, что делает, время задержки и что делать потом
+$paragraph.on('click', function(){
+	$(this).animate({
+		opacity: 0
+	}, 2000, function() {
+		alert('animation completed');
+	})
+});
+
+	</script>
+</body>
+</html>
