@@ -21,17 +21,19 @@
 // // Замыкание - это лексическое окружение + ссылка на внешнее лексическое окружение
 // // Функция доступна только в своем scope(например, функция вложенная в функцию не будет видна в window)
 // Первый пример замыкания
-// function createCounter() {
-// 	var count = 1;
-// 	return function() {
-// 		return count++;
-// 	}
-// }
+function createCounter() {
+	var count = 1;
+	return function() {
+		return count++;
+	}
+}
 // var newCounter = createCounter();
 // var newCounter2 = createCounter(); // это другой счетчик, никак не сязанный с предыдущим
 // newCounter();
 // newCounter();
 // console.log(newCounter()); // результат 3!!!
+console.log(createCounter()); // результат 3!!!
+console.log(createCounter()); // результат 3!!!
 
 // Второй пример замыкания
 // Immediately invoked function expression - моментально вызываемая функция

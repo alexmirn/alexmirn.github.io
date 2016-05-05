@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<link rel="stylesheet" type="text/css" href="css/submenu.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 </head>
 <body>
 	<ul class="menu">
@@ -28,7 +29,6 @@
 			</ul>
 		</li>
 	</ul>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js">
 	<script type="text/javascript">
 		$(function() {
 			var $links = $('.menu a');
@@ -44,7 +44,7 @@
 			}); 
 		});
 
-		window.onbeforeunload = function() {
+		window.onbeforeunload = function() { // !!!!! переспрашивание перед уходом со страницы
   			return "Данные не сохранены. Точно перейти?";
 		};
 	</script>
