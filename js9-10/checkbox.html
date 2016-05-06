@@ -7,20 +7,11 @@
         <!-- Shared assets -->
         <link rel="stylesheet" type="text/css" href="css/style.css">
 
-        <!-- Example assets -->
-        <link rel="stylesheet" type="text/css" href="css/jcarousel.basic.css">
-        <!-- Select CSS -->
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-        <link href="css/selectivity-full.css" rel="stylesheet">
-        <!-- Carousel scripts -->
-        <script type="text/javascript" src="js/jquery.js"></script>
-        <script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>
 
-        <script type="text/javascript" src="js/jcarousel.basic.js"></script>
-        <!-- Select scripts-->
-        <script src="js/zepto.js"></script>
-        <script src="js/selectivity-full.js"></script>
-        <script src="js/demos.js"></script>
+
+               <!-- Carousel scripts -->
+        <script type="text/javascript" src="js/jquery.js"></script>
+
         <!-- Checkbox script-->
         <script type="text/javascript" src="js/jquery.checkbox.js"></script>
 
@@ -28,7 +19,7 @@
     </head>
     <body>
         <div class="wrapper">
-            <h2>Select a hero</h2>
+<!--             <h2>Select a hero</h2>
             <select id="single-select-box" class="selectivity-input" data-placeholder="No hero selected" name="traditional[single]">
                 <option>Cartman</option>
                 <option>Batman</option>
@@ -62,9 +53,14 @@
                     
                 </p>
             </div>
-            <span class="niceCheck"><input type="checkbox" name="ch1" /></span>
-            <span>You want to become this hero</span>
+ -->            
         </div>
+            <!-- <span class="niceCheck"><input type="checkbox" name="ch1" /></span> -->
+            <span class="niceCheck" onclick="changeCheck(this)" id="niceCheckbox1"><input type="checkbox" name="ch1" checked /></span>
+            <p>You want to become this hero</p>
+
+        <input type="checkbox" id="test-check1" /gt;
+<label for="test-check1">Чекбокс 1:</label>
 
     </body>
 </html>
