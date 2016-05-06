@@ -1,0 +1,30 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.wrapper{
+	position: relative;
+	margin: 100px auto;
+	width: 1000px;
+}
+.box{
+	position: relative;
+	box-sizing:	border-box;
+	padding: 20px;
+	height: 100px;
+	width: 200px;
+	margin-bottom: 20px;
+	font-size: 20px;
+	font-family: Tahoma;
+	color: white;
+	background: green;
+	text-align: center;
+}
+.css-box{
+	left: 0; /*свойству для анимации необходимо задать изначальное положение*/
+	transition: all 1s;
+}
+.css-box-animated{
+	left: 200px;
+	opacity: 0.5;
+}
