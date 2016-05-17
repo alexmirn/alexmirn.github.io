@@ -61,13 +61,13 @@ nav li li:last-child a {
 
 /* show arrows for dropdowns */
 nav li.dropdown > a {
-    background-image:url('../img/arrow-down.png');
+    /*background-image:url('../img/arrow-down.png');*/
     background-position:right 20px;
     background-repeat:no-repeat;
 }
 
 nav li li.dropdown > a {
-    background-image:url('../img/arrow-right.png');
+    /*background-image:url('../img/arrow-right.png');*/
     background-position:right 16px;
     background-repeat:no-repeat;
 }
@@ -75,4 +75,11 @@ nav li li.dropdown > a {
 /* hide sub menu links */
 ul.sub-menu {
     display:none;
+}
+
+.css-box{
+    transition: all 1s;
+}
+.css-box-animated{
+    opacity: 0.5;
 }
