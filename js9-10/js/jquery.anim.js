@@ -53,12 +53,7 @@ function menu() {
 
         if (subMenu) {
             subMenu.style.display = 'block';
-            function () {
-                jQuery(this).animate({
-                backgroundColor:"#03C",
-                }, 500 );
-            };
-
+            
 
             var childMenu = this.querySelector('.dropdown');
             if (childMenu) {
@@ -69,12 +64,21 @@ function menu() {
 
     function hideMenu() {
         var subMenu = this.querySelector('.sub-menu');
-        
-
+    
         if (subMenu) {
-           // $(this).animate({
-           //      backgroundColor:"green",
-           //  }, 500 );
+            var fps = 50;
+
+            var timer = setInterval(function() {
+                            if (!subMenu.style.opacity) {
+                                subMenu.style.opacity = 1;
+                            }
+                            subMenu.style.opacity = subMenu.style.opacity - 0.05;
+                            if (subMenu.style.opacity <= 0) {
+                                clearInterval(timer);
+                                subMenu.style.opacity = 1;
+                                subMenu.style.display = 'none';
+                            }
+                        }, 1000 / fps)
 
             subMenu.setAttribute("style", "display: none;");
             var childMenu = this.querySelector('.dropdown');
