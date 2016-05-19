@@ -1,0 +1,23 @@
+.fancybox-model{
+	position: absolute;
+	width: 650px;
+	height: 350px;
+	top: 50%;
+	left: 50%;
+	margin: -325px 0 0 -175px;
+	text-align: center;
+	background: black;
+}
+.fancybox-overlay{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+.my-image{
+	width: 500px;
+	height: 300px;
+}
+
