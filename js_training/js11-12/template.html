@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>plugin</title>
+	<!-- <link rel="stylesheet" type="text/css" href="css/animation.css"> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="js/template.js"></script>
+	<script src="js/script1.js"></script>
+</head>
+<body>
+<!-- 
+шаблонизатор - это функция, которая принимает в себя строку и объект(шаблон), и обрабатывает инфу из объекта,
+вставляя ее в строку -->
+	 <!--1-ый вариант без использования шаблона
+	<script type="text/template" id="test">
+		<h1>test</h1>
+	</script>-->
+	
+	<!--2-ой вариант уже с шаблоном-->
+	<script type="text/template" id="test">
+		<h1><%= title %></h1>
+	</script>
+	<!-- // то же, что и =
+		// <h1><%= print(title) %></h1> -->
+</body>
+</html>
