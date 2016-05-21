@@ -4,27 +4,21 @@
         <meta charset="utf-8">
         <title>js9-10</title>
 
-        <!-- Shared assets -->
         <link rel="stylesheet" type="text/css" href="css/style.css">
 
-        <!-- Example assets -->
-        <link rel="stylesheet" type="text/css" href="css/jcarousel.basic.css">
-        <!-- Select CSS -->
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-        <link href="css/selectivity-full.css" rel="stylesheet">
-        <!-- Carousel scripts -->
+        <!-- jQuery -->
         <script type="text/javascript" src="js/jquery.js"></script>
+        <!-- Carousel scripts -->
+        <link rel="stylesheet" type="text/css" href="css/jcarousel.basic.css">
         <script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>
-
-        <script type="text/javascript" src="js/jcarousel.basic.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
         <!-- Select scripts-->
-        <script src="js/zepto.js"></script>
+        <link href="css/selectivity-full.css" rel="stylesheet">
         <script src="js/selectivity-full.js"></script>
         <script src="js/demos.js"></script>
-        <!-- Checkbox script-->
-        <script type="text/javascript" src="js/jquery.checkbox.js"></script>
-
-
+        <!-- iCheck -->
+        <link rel="stylesheet" href="js/icheck/skins/square/aero.css">
+        <script src="js/icheck/icheck.js" charset="utf-8"></script>
     </head>
     <body>
         <div class="wrapper">
@@ -62,9 +56,40 @@
                     
                 </p>
             </div>
-            <span class="niceCheck"><input type="checkbox" name="ch1" /></span>
-            <span>You want to become this hero</span>
         </div>
+
+         <div class="checkbox">
+        <h1>iCheck Plug-in</h1>
+        <label>
+            <input class="icheck" type="checkbox">You want to fly</label>
+        <label>
+            <input class="icheck" type="checkbox" checked>You want to have super power</label>
+        <label>
+            <input class="icheck" type="checkbox" disabled>You want to break free</label>
+        <label>
+            <input class="icheck" type="checkbox" checked disabled>You love your mom</label>
+    </div>
+    <div class="checkbox" id="custom-css">
+        <h1>Custom CSS Checkbox</h1>
+        <form action="#">
+            <p>
+                <input type="checkbox" id="test1" />
+                <label for="test1">You want to fly</label>
+            </p>
+            <p>
+                <input type="checkbox" id="test2" checked />
+                <label for="test2">You want to have super power</label>
+            </p>
+            <p>
+                <input type="checkbox" id="test3" disabled />
+                <label for="test3">You want to break free</label>
+            </p>
+            <p>
+                <input type="checkbox" id="test4" checked disabled />
+                <label for="test4">You love your mom</label>
+            </p>
+        </form>
+    </div>
 
     </body>
 </html>
