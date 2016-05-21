@@ -9,6 +9,14 @@
 	<script src="js/script1.js"></script>
 </head>
 <body>
+	 <!-- 3-й вариант с примером цикла -->
+	<script type="text/template" id="test">
+		<%	for (var i = 0; i < data.length; i++) { %>
+			<h1><%= data[i].title %></h1>
+			<p><%= data[i].content %></p>
+		<% } %>
+	</script>
+
 <!-- 
 шаблонизатор - это функция, которая принимает в себя строку и объект(шаблон), и обрабатывает инфу из объекта,
 вставляя ее в строку -->
@@ -17,10 +25,10 @@
 		<h1>test</h1>
 	</script>-->
 	
-	<!--2-ой вариант уже с шаблоном-->
+	<!--2-ой вариант уже с шаблоном
 	<script type="text/template" id="test">
 		<h1><%= title %></h1>
-	</script>
+	</script>-->
 	<!-- // то же, что и =
 		// <h1><%= print(title) %></h1> -->
 </body>
