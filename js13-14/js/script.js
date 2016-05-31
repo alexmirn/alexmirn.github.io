@@ -46,21 +46,21 @@ $(function() {
                 $correct[i] = objData.questions[i].correct;
             if ($($answer[i]).attr('id') == $correct[i]) {
                 $result += 1;
-                $modal.append('<p class="correct">Ответ на ' + (i+1) + ' вопрос <b>правильный</b></p>');
+                $modal.append('<p class="bg-success">Ответ на вопрос № ' + (i+1) + ' - <b>правильный</b></p>');
             } else {
-                $modal.append('<p class="incorrect">Ответ на ' + (i+1) + ' вопрос <b>неправильный</b></p>');
+                $modal.append('<p class="bg-danger">Ответ на вопрос № ' + (i+1) + ' - <b>неправильный</b></p>');
             }
         }
 
-        $modal.append('<h4 class="result">Всего правильных ответов: ' + $result + '</h4><hr>');
+        $modal.append('<p class="result">Правильных ответов: ' + $result + '</p>');
 
         if ($result == objData.questions.length) {
-            $modal.append('<h4>Поздравляем! Вы успешно прошли тест</h4>');
+            $modal.append('<h4>Вы прошли тест!</h4>');
         } else {
-            $modal.append('<h4>Tест не пройден</h4>');
+            $modal.append('<h4>Вы не прошли тест</h4>');
         }
 
-        $modal.append('<button>Закрыть и начать заново</button>');
+        $modal.append('<button class="btn btn-info">Пройти еще раз</button>');
         $('body').append($modal);
 
         $('button').one('click', function (e) {
@@ -75,54 +75,3 @@ $(function() {
     return this;
 
 });
-// var body = document.querySelector('body');
-// var wrapper = document.createElement('div');
-// var h2 = document.createElement('h2');
-// var form = document.createElement('form');
-// var h4 = document.createElement('h4');
-// var checkbox = document.createElement('div');
-// var label = document.createElement('label');
-// var input = document.createElement('input');
-// var center = document.createElement('div');
-// var button = document.createElement('button');
-
-
-// body.appendChild(wrapper);
-
-// wrapper.classList.add('wrapper');
-// wrapper.appendChild(h2);
-// wrapper.appendChild(form);
-// wrapper.appendChild(center);
-
-// h2.classList.add('text-center');
-// h2.innerHTML = 'Тест по программированию';
-
-// form.setAttribute('href', '#');
-// form.setAttribute('method', 'POST');
-
-// checkbox.classList.add('checkbox');
-// checkbox.appendChild(label);
-
-// label.appendChild(input);
-// input.setAttribute('type', 'checkbox');
-
-// center.classList.add('text-center');
-// center.appendChild(button);
-
-// button.setAttribute('type', 'button');
-// button.classList.add('btn');
-// button.classList.add('btn-default');
-// button.innerHTML = 'Проверить мои результаты';
-
-// for (var i = 0; i < 3; i++) {
-//   form.appendChild(h4.cloneNode(true)).innerHTML = (i + 1) + '. Вопрос №' + (i + 1);
-//   addCheckboxes(i);
-// }
-
-// function addCheckboxes(i) {
-//   for (var j = 0; j < 3; j++) {
-//     form.appendChild(checkbox.cloneNode(true)).querySelector('label').querySelector('input');
-//     document.querySelectorAll('label')[(i*3)+j].appendChild(document.createTextNode('Вариант ответа №' + (j + 1)));
-//   }
-// }
-
