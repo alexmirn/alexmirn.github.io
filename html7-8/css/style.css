@@ -16,11 +16,13 @@
   font-weight: bold;
   font-style: normal;
 }
+.wrapper-background{
+	background: url('../img/bg2.jpg');
+}
 .wrapper1{
   position: relative;
   height: 516px;
   width: 100%;
-  background: url('../img/bg2.jpg');
   background-repeat: no-repeat;
   background-position: top center;
   margin: 0 auto;
@@ -369,7 +371,7 @@ header{
 .info-box{
 	clear: both;
 	height: 1210px;
-	max-width: 280px;
+	max-width: 480px;
 	text-align: center;
 	margin: 0 auto;
 	padding-top: 1px;
