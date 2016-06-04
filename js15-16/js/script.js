@@ -3,6 +3,12 @@ $(function () {
 
     $('.btn').on('click', search);
 
+    $('.search').keypress(function () {
+        if (event.keyCode == 13) {
+            search;
+        } else return;
+    });
+
     function search(e) {
         e.preventDefault();
         $('.result img').remove();
