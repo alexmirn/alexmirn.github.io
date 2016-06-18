@@ -208,7 +208,7 @@
 .slider-bg {
 	position: absolute;
 	margin-top: -60px;
-    background: rgba(0, 0, 0, 0.2);
+    /*background: rgba(0, 0, 0, 0.2);*/
 	height: 400px;
 }
 .sprite-left-arrow {
@@ -429,7 +429,7 @@ font-family: "League Gothic Regular", Arial, sans-serif;
 .slider-bg {
 	position: absolute;
 	margin-top: 80px;
-    background: rgba(0, 0, 0, 0.2);
+    /*background: rgba(0, 0, 0, 0.2);*/
 	height: 400px;
 }
 .sprite-left-arrow {
