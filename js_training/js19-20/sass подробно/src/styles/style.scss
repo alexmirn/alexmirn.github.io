@@ -1,0 +1,29 @@
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+  background-color: $bg-color;
+  font-size: 30px;
+}
+
+// вложенность
+.menu {
+	position: relative;
+	overflow: hidden;
+	padding: 20px;
+	display: block;
+	border: 2px solid black;
+	@include border-radius(20px);
+
+
+  	li { 
+  		float: left;
+  		list-style: none;
+  		padding: 20px; 
+  	}
+
+	a {
+	   	color: $red;
+	   	text-decoration: none;
+	}
+}
