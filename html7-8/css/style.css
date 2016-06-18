@@ -181,7 +181,7 @@ header{
 .sprite-arrow {
 	margin-top: 13px;
     display: block;
-    width: 22px;
+    width: 21px;
     height: 34px;
     background-image: url('../img/spritesheet.png');
     background-repeat: no-repeat;
