@@ -200,15 +200,18 @@ footer{
 }
 .slider-box {
 	clear: both;
-    background: rgba(0, 0, 0, 0.2);
+    /*background: rgba(0, 0, 0, 0.2);*/
     padding-bottom: -1px;
     padding-top: -1px;
     z-index: 10;
 }
+.slider-box-background{
+	background: rgba(0, 0, 0, 0.2)
+}
 .slider-bg {
 	position: absolute;
 	margin-top: -60px;
-    background: rgba(0, 0, 0, 0.2);
+    /*background: rgba(0, 0, 0, 0.2);*/
 	height: 400px;
 }
 .sprite-left-arrow {
@@ -426,10 +429,13 @@ font-family: "League Gothic Regular", Arial, sans-serif;
     padding-top: -1px;
     z-index: 10;
 }
+.slider-box-background{
+	background: rgba(0, 0, 0, 0.2)
+}
 .slider-bg {
 	position: absolute;
 	margin-top: 80px;
-    background: rgba(0, 0, 0, 0.2);
+    /*background: rgba(0, 0, 0, 0.2);*/
 	height: 400px;
 }
 .sprite-left-arrow {
