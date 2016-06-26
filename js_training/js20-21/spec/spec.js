@@ -13,7 +13,7 @@ describe("app", function() {
     expect(result).toEqual('Hello, Alex');
   });
 
-  it("should call sгь method", function() {
+  it("should call sum method", function() {
 
   	//prepare
   	var result;
