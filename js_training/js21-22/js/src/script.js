@@ -20,3 +20,13 @@ function showText(title ='DefaultTitle', a=200) {
 
 showText('Hello');
 showText();
+
+//короткая запись функции
+let sum = (a, b) => a + b;
+console.log('sum(2,3) ', sum(2,3));
+
+//итератор
+let arr = [1, 2, 3];
+for (let value of arr) {
+	console.log('value ', value);
+}
