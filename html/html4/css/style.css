@@ -1,0 +1,200 @@
+.body{
+	font-family: Arial sans-serif;
+}
+
+.page {
+	background: url('../img/background.png');
+}
+
+.box {
+	margin: 0 auto;
+	box-shadow:
+	-4px -4px 2px -3px #323232,
+	-4px 4px 2px -3px #323232,
+	4px -4px 2px -3px #323232,
+	4px 4px 2px -3px #323232;
+	width: 800px;
+	height: 95%;
+	background: white;
+	font-size: 12px;
+	overflow: hidden;
+}
+
+.logo-img {
+	border-radius: 2px;
+	height: 85px;
+}
+
+.fig {
+    margin-bottom: 10px; 
+    border: 1px solid #E1E1E1;
+    text-align: left;
+   }
+
+.flag {
+	padding: 0px 0px;
+	border-radius: 2px;
+	width: 30px;
+	height: 30px;
+	color: #128AA7;
+}
+
+figcaption {
+	font-size: 7px;
+	text-align: center;
+}
+
+.flags figure{ 
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+   }
+
+.figure{
+	margin-right: 20px;
+}
+
+
+.figure-margin{
+	display: inline-block;
+	margin-right: 10px;
+	margin-bottom: 2px;
+}
+span {
+	font-size: 7px;
+}
+
+.figure{
+	display: inline;
+}
+
+.header-text {
+	float: right;
+	color: #128AA7;
+	text-align: right;
+	font-size: 10px; 
+}
+
+.text{
+	margin-right: 10px;
+	margin-bottom: 8px;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+ .header-photo img{
+	width: 800px;
+}
+
+.sidebar {
+	background: #EDEEF0;
+	float: left;
+	width: 20%;
+	height: 100%;
+	color: #7D837F;
+	text-align: center;
+	padding-bottom: 20000px;
+	margin-bottom: -20000px;
+}
+
+.content {
+	background: white;
+	width: 50%;
+	height: 100%;
+	margin: 0 auto;
+	padding-bottom: 20000px;
+	margin-bottom: -20000px;
+}
+
+.news {
+	background: #EDEEF0;
+	color: #7D837F;
+	float: right;
+	width: 20%;
+	height: 100%;
+	text-align: center;
+	padding-bottom: 20000px;
+	margin-bottom: -20000px;
+}
+
+.footer {
+	clear: both; 
+	background: transparent;
+	text-align: center;
+	line-height: 30px;
+	font-size: 10px;
+	color: white;
+}
+
+ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: #323232;
+}
+ul:after {
+    display: block;
+    content: ' ';
+    clear: both;
+    float: none;
+}
+ul.menu > li {
+    float: left;
+    position: relative;
+    margin: 0px 15px;
+}
+ul.menu > li > a {
+    display: block;
+    padding: 10px;
+    color: white;
+    background-color: #323232;
+    text-decoration: none;
+}
+
+ul.submenu {
+    display: none;
+    position: absolute;
+    width: 120px;
+    top: 32px;
+    left: 0;
+    background-color: white;
+}
+
+ul.submenu > li {
+    display: block;
+}
+
+ul.submenu > li > a {
+    display: block;
+    padding: 5px 10px;
+    color: white;
+    background-color: #323232;
+    text-decoration: none;
+}
+
+ul.submenu > li > a:hover {
+    text-decoration: underline;
+}
+
+ul.menu > li:hover > ul.submenu {
+    display: block;
+}
+
+.horizontal li{
+	float: left;
+}
+
+.clearfix:after {
+	content: '';
+	clear: both;
+	display: block;
+}
+
+h3{
+	color: #424C43;
+	font-size: 15px;
+}
+
