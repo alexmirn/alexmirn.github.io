@@ -26,14 +26,31 @@ $(function() {
 	};
 
 	localStorage.setItem('questionary', JSON.stringify(data));
-	let objData = JSON.parse(localStorage.getItem('questionary'));
+	let $objData = JSON.parse(localStorage.getItem('questionary'));
 
 	let html = $('#test').html();
-	let content = tmpl(html, objData);
 
-    $('.wrapper').append(`<h3 class="text-center">${data.header}</h3>`);
-	$('.wrapper').append(content);
+    $('.wrapper').append(`<h3 class="text-center">${$objData.header}</h3>`);
+    $('.wrapper').append(`<form href="#" method="POST">`);
+    for (let i = 0; i < $objData.questions.length; i++) {
+        let question = $('<div class="question">');
+        question.append(`<h4> ${i+1}. ${$objData.questions[i].title}</h4>`);
+        $('.wrapper').append(question);
+        for (var j = 0; j < $objData.questions[i].answers.length; j++) {
+            let answer = $('<div class="radio">');
+            answer.append(`<input type="radio" name="${$objData.questions[i].radioname}" 
+                id="${$objData.questions[i].id[j]}" />`);
+            answer.append(`<label for="${$objData.questions[i].id[j]}">`);
+            answer.append(`${$objData.questions[i].answers[j]}</label>`);
+            $('.wrapper').append(answer);
+            $('.wrapper').append('</div>');
+        }
+        $('.wrapper').append('</div>');
 
+    }
+    $('.wrapper').append(`</form>`);
+    $('.wrapper').append(`<div class="button-wrapper">
+        <button class="btn btn-default">${$objData.submit}</button></div>`);
 
     function showModal(e) {
         e.preventDefault();
@@ -43,8 +60,8 @@ $(function() {
         let $answer = $('input:checked');
         let $correct = [];
 
-        for (let i = 0; i<objData.questions.length; i++) {
-                $correct[i] = objData.questions[i].correct;
+        for (let i = 0; i<$objData.questions.length; i++) {
+                $correct[i] = $objData.questions[i].correct;
             if ($($answer[i]).attr('id') == $correct[i]) {
                 $result += 1;
                 $modal.append(`<p class="bg-success">Ответ на вопрос № ${i+1} - <b>правильный</b></p>`);
@@ -55,7 +72,7 @@ $(function() {
 
         $modal.append(`<p class="result">Правильных ответов: ${$result}</p>`);
 
-        if ($result == objData.questions.length) {
+        if ($result == $objData.questions.length) {
             $modal.append('<h4>Вы прошли тест!</h4>');
         } else {
             $modal.append('<h4>Вы не прошли тест</h4>');

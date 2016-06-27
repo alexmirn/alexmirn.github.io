@@ -16,29 +16,7 @@
 <body>
 			
 	<div class="wrapper">
-		<!-- <h3 class="text-center"><%= header %></h3> -->
-		<script type="text/template" id="test">
-					
-				<form href="#" method="POST">
-					                <% for (var i = 0; i < questions.length; i++) { %>
-	                <div>
-	                    <h4><%= (i+1) + '. ' + questions[i].title %></h4>
-	                    <% for (var j = 0; j < questions[i].answers.length; j++) { %>
-	                        <div class="radio">
-	                            <input type="radio"
-	                            name="<%= questions[i].radioname %>"
-	                            id="<%= questions[i].id[j] %>" />
-	                            <label for="<%= questions[i].id[j] %>">
-	                            <%= questions[i].answers[j] %></label>
-	                        </div>
-	                    <% }; %>
-	                </div>
-	                <% }; %>
-			
-					<div class="button-wrapper">
-						<button class="btn btn-default"><%= submit %></button>
-					</div>
-				</form>
+		<script type="text/template" id="test">		
 	    </script>
 	</div>
 
