@@ -29,7 +29,7 @@ function View(model) {
 
 	function init() {
 		var wrapper = tmpl($('#wrapper-template').html());
-
+		debugger
 		$('body').append(wrapper);
 		self.elements = {
 			input: $('.item-value'),
