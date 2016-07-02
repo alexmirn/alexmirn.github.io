@@ -8,8 +8,6 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     sourcemaps = require('gulp-sourcemaps'),
     cleanCSS = require('gulp-clean-css'),
-    imagemin = require('gulp-imagemin'),
-    pngquant = require('imagemin-pngquant'),
     rimraf = require('rimraf')
     // browserSync = require("browser-sync"),
     // reload = browserSync.reload;
@@ -89,12 +87,12 @@ gulp.task('style:build', function () {
 
 gulp.task('image:build', function () {
     gulp.src(path.src.img)
-        .pipe(imagemin({
-            progressive: true,
-            svgoPlugins: [{removeViewBox: false}],
-            use: [pngquant()],
-            interlaced: true
-        }))
+        // .pipe(imagemin({
+        //     progressive: true,
+        //     svgoPlugins: [{removeViewBox: false}],
+        //     use: [pngquant()],
+        //     interlaced: true
+        // }))
         .pipe(gulp.dest(path.dist.img))
         // .pipe(reload({stream: true}));
 });
