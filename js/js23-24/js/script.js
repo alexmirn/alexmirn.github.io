@@ -22,6 +22,19 @@ function Model(data) {
 
 		return self.data;
 	};
+
+	self.editItem = function(item, $editElem) {
+		var editDataIndex = self.data.indexOf($editElem.prev().prev().attr('data-value'));
+		if (editDataIndex === -1) {
+			return;
+		}
+		if (item == '') {
+			return;
+		}
+		self.data[editDataIndex] = item;
+		
+		return self.data;
+	};
 }
 
 function View(model) {
@@ -29,12 +42,12 @@ function View(model) {
 
 	function init() {
 		var wrapper = tmpl($('#wrapper-template').html());
-		debugger
+
 		$('body').append(wrapper);
 		self.elements = {
-			input: $('.item-value'),
-			addBtn: $('.item-add'),
-			listContainer: $('.item-list')
+			input: $('.list__item__value'),
+			addBtn: $('.list__item__add'),
+			listContainer: $('.list')
 		};
 		self.renderList(model.data);
 	}
@@ -42,6 +55,13 @@ function View(model) {
 	self.renderList = function(data) {
 		var list = tmpl($('#list-template').html(), {data: data});
 		self.elements.listContainer.html(list);
+	};
+
+	self.addEditItems = function(item, $editElem) {
+		var itemNew = $('<input type="text" class="list__item__value short" value="' + item + '">');
+        var saveBtn =$('<button class ="list__item__edit__save">Save</button>');
+        $editElem.closest('button').hide();
+       	$editElem.parent().append(saveBtn).append(itemNew);
 	};
 
 	init();
@@ -52,9 +72,11 @@ function Controller(model, view) {
 
 	view.elements.addBtn.on('click', addItem);
 	// обработчик слушает по клику на listContainer, который есть всегда и фильтрует его по .item-delete 
-	view.elements.listContainer.on('click', '.item-delete', removeItem);
+	view.elements.listContainer.on('click', '.list__item__delete', removeItem);
 	
-	view.elements.listContainer.on('click', '.item-edit', editItem);
+	view.elements.listContainer.on('click', '.list__item__edit', editItem);
+
+	view.elements.listContainer.on('click', '.list__item__edit__save', editItemSave);
 
 	function addItem() {
 		var newItem = view.elements.input.val();
@@ -67,6 +89,19 @@ function Controller(model, view) {
 		var item = $(this).attr('data-value');
 
 		model.removeItem(item);
+		view.renderList(model.data);
+	}
+
+	function editItem() {
+		var editElem = $(this);
+		var item = $(this).attr('data-value');
+		view.addEditItems(item, editElem);
+	}
+
+	function editItemSave() {
+		var $editElem = $(this);
+		var item = $(this).next().val();
+		model.editItem(item, $editElem);
 		view.renderList(model.data);
 	}
 }

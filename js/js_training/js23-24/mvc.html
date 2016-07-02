@@ -21,7 +21,9 @@
 	<script type="text/template" id="list-template">
 	<% for (var i = 0; i < data.length; i++) { %>
 	<!-- data-value - это аттрибут помещает значение элемента, нужное нам на бекэнде --> 
-		<li><%= data[i] %> <span data-value="<%= data[i] %>" class="item-delete">x</span></li>
+		<li><%= data[i] %> 
+			<span data-value="<%= data[i] %>" class="item-delete">x</span>
+		</li>
 	<% } %>
 		
 	</script>

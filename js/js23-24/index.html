@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>MVC RequireJs</title>
+	<script data-main="js/app" src="js/require.js"></script>
+	<link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+	<script type="text/template" id="wrapper-template">
+		<div class="wrapper">
+			<ul class="list"></ul>
+			<div class="aa">
+				<input type="text" class="list__item__value">
+				<button class="list__item__add">Add</button>
+			</div>
+		</div>
+	</script>
+
+	<script type="text/template" id="list-template">
+	<% for (var i = 0; i < data.length; i++) { %>
+	<!-- data-value - это аттрибут помещает значение элемента, нужное нам на бекэнде --> 
+		<li class="list__item"><%= data[i] %>
+			<div class="list__item__controlls"> 
+				<button class="list__item__edit" data-value="<%= data[i] %>">edit</button>
+				<button class="list__item__delete" data-value="<%= data[i] %>">delete</button>
+			</div>
+		</li>
+	<% } %>
+		
+	</script>
+</body>
+</html>
