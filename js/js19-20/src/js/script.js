@@ -1,5 +1,3 @@
-
-
 $(function () {
     var $carousel = $('.carousel');
     var $blockWidth = $($carousel).find('.carousel__block').css('width');
@@ -10,7 +8,7 @@ $(function () {
             if (!$($carousel).hasClass('hover')) {
                 moveRight($carousel);
             }
-        }, 3000);
+        }, 2500);
     };
 
     function moveRight() {
