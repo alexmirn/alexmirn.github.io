@@ -1,6 +1,6 @@
 $(function () {
     var $carousel = $('.carousel');
-    var $blockWidth = $($carousel).find('.carousel__block').css('width');
+    var $blockWidth = $($carousel).find('.carousel__item').css('width');
     var $currentLeft= -69;
 
     function autoRight() {
@@ -15,8 +15,8 @@ $(function () {
         $($carousel).find('.carousel__items').animate({
             left: '-'+ $blockWidth +'px'
         }, 300, function() {
-            $($carousel).find('.carousel__block').eq(0).clone().appendTo($($carousel).find('.carousel__items'));
-            $($carousel).find('.carousel__block').eq(0).remove();
+            $($carousel).find('.carousel__item').eq(0).clone().appendTo($($carousel).find('.carousel__items'));
+            $($carousel).find('.carousel__item').eq(0).remove();
             $($carousel).find('.carousel__items').css({"left":"0px"});
             });
         $currentLeft += 24;
@@ -41,22 +41,22 @@ $(function () {
 
     var $flag = false;
 
-    $('.banner__toggle').on('click', function() {
+    $('.accordion__toggle').on('click', function() {
             if (!$flag) {
-                $('.banner__toggle').html('+');
-                $('.banner__toggle').removeClass('banner__active');
-                $('.banner__title').removeClass('banner__active');
-                $('.banner__text').slideUp();
-                $(this).parent().find('.banner__text').slideDown();
+                $('.accordion__toggle').html('+');
+                $('.accordion__toggle').removeClass('accordion__active');
+                $('.accordion__title').removeClass('accordion__active');
+                $('.accordion__text').slideUp();
+                $(this).parent().find('.accordion__text').slideDown();
                 $(this).html('-');
-                $(this).addClass('banner__active');
-                $(this).parent().find('.banner__title').addClass('banner__active');
+                $(this).addClass('accordion__active');
+                $(this).parent().find('.accordion__title').addClass('accordion__active');
                 $flag = true;
             } else {
-                $(this).parent().find('.banner__text').slideUp();
+                $(this).parent().find('.accordion__text').slideUp();
                 $(this).html('+');
-                $(this).removeClass('banner__active');
-                $(this).parent().find('.banner__title').removeClass('banner__active');
+                $(this).removeClass('accordion__active');
+                $(this).parent().find('.accordion__title').removeClass('accordion__active');
                 $flag = false;
             }
         });
