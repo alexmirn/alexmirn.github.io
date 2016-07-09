@@ -15,12 +15,10 @@
     "gulp-clean-css": "^2.0.9",
     "gulp-concat": "^2.6.0",
     "gulp-concat-css": "^2.3.0",
-    "gulp-imagemin": "^3.0.1",
     "gulp-sass": "^2.3.1",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-uglify": "^1.5.3",
     "gulp-watch": "^4.3.6",
-    "imagemin-pngquant": "^5.0.0",
     "rimraf": "^2.5.2"
   },
   "dependencies": {}
