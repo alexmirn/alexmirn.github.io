@@ -1,14 +1,19 @@
 $(function () {
 
-        $('.carousel').carousel();
+        $('.bxslider').bxSlider({
+            auto: false,
+            autoControls: true
+        });
 
         function grid() {
-            var $grid = $('.grid').imagesLoaded( function() {
+            var $grid = $('.grid');
+            $grid.imagesLoaded(function () {
                 $grid.masonry({
                     itemSelector: '.grid-item',
-                    columnWidth: '.grid-sizer',
-                    gutter: '.gutter-sizer',
-                    percentPosition: true
+                    columnWidth: function( containerWidth ) {
+                        return (containerWidth / 3 - 10)
+                    },
+                    gutterWidth: 10
                 });
             });
         }
@@ -21,7 +26,7 @@ $(function () {
                 url: 'https://pixabay.com/api/?key=2650584-e8feab9b11ed644dcec728ac9&q=' + $searchKey + '&image_type=photo',
                 dataType: 'jsonp',
                 success: function (data) {
-                    console.log(data);
+
                     var $html = $('#container').html();
                     var $content = tmpl($html, data);
                     $('.ideas').append($content);
@@ -41,5 +46,4 @@ $(function () {
             $('.search__field').val('');
         })
     }
-)
-;
+);
