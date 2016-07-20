@@ -22,16 +22,16 @@
 	  padding-top: 48px;
 	}
 
-	.promo__header__connect {
+	.promo__contact {
 	  float: right;
 	  margin-right: 17.3%;
 	}
 
-	.promo__header__connect__block {
+	.promo__item {
 	  display: inline-block;
 	}
 
-	.promo__header__connect__link {
+	.promo__link {
 	  padding: 12px 18px 10px 19px;
 	  color: $color2;
 	  font-size: 14px;
@@ -44,7 +44,7 @@
 	  }
 	}
 
-	.promo__header__title {
+	.promo__title {
 	  float: left;
 	  clear: left;
 	  margin-left: 17.3%;
@@ -144,7 +144,7 @@
 	  border-radius: 5px;
 	}
 
-	.usage__item__num {
+	.usage__item__step {
 	  display: inline-block;
 	  margin-left: 2px;
 	  padding: 7px 12px 5px 14px;
@@ -156,7 +156,7 @@
 	  text-transform: uppercase;
 	}
 
-	.usage__item__num--second {
+	.usage__item__step--second {
 	  margin-top: 30px;
 	  margin-left: 0;
 	}
