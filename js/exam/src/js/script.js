@@ -18,6 +18,12 @@ $(function () {
             });
         }
 
+        $('.grid').masonry({
+          // options
+          itemSelector: '.grid-item',
+          columnWidth: 200
+        });
+        
         function search() {
             $('.ideas').find('div').remove();
             var $searchKey = $('.search__field').val();

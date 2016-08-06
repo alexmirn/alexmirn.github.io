@@ -125,21 +125,33 @@ table {
 @font-face {
   font-family: 'Montserrat';
   src: url("../fonts/montserrat-regular-webfont.eot");
-  src: url("../fonts/montserrat-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat-regular-webfont.woff2") format("woff2"), url("../fonts/montserrat-regular-webfont.woff") format("woff"), url("../fonts/montserrat-regular-webfont.ttf") format("truetype"), url("../fonts/montserrat-regular-webfont.svg#montserratregular") format("svg");
+  src: url("../fonts/montserrat-regular-webfont.eot?#iefix") format("embedded-opentype"), 
+  url("../fonts/montserrat-regular-webfont.woff2") format("woff2"), 
+  url("../fonts/montserrat-regular-webfont.woff") format("woff"), 
+  url("../fonts/montserrat-regular-webfont.ttf") format("truetype"), 
+  url("../fonts/montserrat-regular-webfont.svg#montserratregular") format("svg");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'Montserrat';
   src: url("../fonts/montserrat-bold-webfont.eot");
-  src: url("../fonts/montserrat-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat-bold-webfont.woff2") format("woff2"), url("../fonts/montserrat-bold-webfont.woff") format("woff"), url("../fonts/montserrat-bold-webfont.ttf") format("truetype"), url("../fonts/montserrat-bold-webfont.svg#montserratbold") format("svg");
+  src: url("../fonts/montserrat-bold-webfont.eot?#iefix") format("embedded-opentype"), 
+  url("../fonts/montserrat-bold-webfont.woff2") format("woff2"), 
+  url("../fonts/montserrat-bold-webfont.woff") format("woff"), 
+  url("../fonts/montserrat-bold-webfont.ttf") format("truetype"), 
+  url("../fonts/montserrat-bold-webfont.svg#montserratbold") format("svg");
   font-weight: 700;
   font-style: normal; }
 
 @font-face {
   font-family: 'Roboto';
   src: url("../fonts/roboto-thin-webfont.eot");
-  src: url("../fonts/roboto-thin-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-thin-webfont.woff2") format("woff2"), url("../fonts/roboto-thin-webfont.woff") format("woff"), url("../fonts/roboto-thin-webfont.ttf") format("truetype"), url("../fonts/roboto-thin-webfont.svg#robotothin") format("svg");
+  src: url("../fonts/roboto-thin-webfont.eot?#iefix") format("embedded-opentype"), 
+  url("../fonts/roboto-thin-webfont.woff2") format("woff2"), 
+  url("../fonts/roboto-thin-webfont.woff") format("woff"), 
+  url("../fonts/roboto-thin-webfont.ttf") format("truetype"), 
+  url("../fonts/roboto-thin-webfont.svg#robotothin") format("svg");
   font-weight: 300;
   font-style: normal; }
 
@@ -284,7 +296,8 @@ table {
 /* PAGER WITH AUTO-CONTROLS HYBRID LAYOUT */
 .bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
   text-align: left;
-  width: 80%; }
+  width: 80%;
+   }
 
 .bx-wrapper .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
   right: 0;
@@ -306,7 +319,29 @@ table {
   font-size: .85em;
   padding: 10px; }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .promo {
+  margin: 0 auto;
   width: 100%;
   height: 700px;
   background: #1a1915;
@@ -315,19 +350,26 @@ table {
   text-align: center; }
 
 .promo__wrapper {
+  margin: 0 auto;
+  text-align: center;
   width: 100%;
-  height: 100%;
+  height: 700px;
   background-image: url("../img/promo.png");
+  background-repeat: no-repeat;
   background-position: center;
   background-size: cover; }
 
 .promo {
-  padding-top: 48px; }
+  padding-top: 48px;
+  margin: 0 auto; }
 
 .promo__contact {
   float: right;
-  margin-right: 17.3%; }
-
+  margin-right: 17.3%;
+  margin-top: 30px; }
+.promo__item {
+    display: inline-block;
+  }
 .promo__contact__block {
   display: inline-block; }
 
@@ -345,6 +387,7 @@ table {
 .promo__title {
   float: left;
   clear: left;
+  margin-top: 30px;
   margin-left: 17.3%;
   color: #fff;
   font-size: 20px;
@@ -354,7 +397,11 @@ table {
 
 .promo__info {
   clear: both;
-  margin-top: 167px; }
+  margin: 200px auto;
+  }
+
+.promo__header {
+  }
 
 .promo__info__title {
   margin: 0 30%;
@@ -363,12 +410,13 @@ table {
   text-transform: uppercase; }
 
 .promo__info__text {
-  margin: 2% 15% 1%;
+  margin: 20px 35%;
   font-family: Roboto;
   font-size: 24px; }
 
 .promo__info__button {
   margin-top: 19px;
+  margin: 20px 35%;
   background: #ff4e50;
   border: 0;
   border-radius: 30px;
@@ -382,27 +430,30 @@ table {
 .promo__info__button:focus {
   outline: 0; }
 
-.about {
+.usage {
+  margin: 97px auto;
   width: 940px;
   height: 457px;
-  margin: 97px auto;
   font-family: Montserrat; }
-
-.about__title {
+.usage__wrapper{
+  margin: 100px auto;
+  width: 940px;
+}
+.usage__title {
   margin-bottom: 36px;
   color: #333;
   font-size: 22px;
   font-weight: 700;
   text-align: center; }
 
-.about__mobile {
+.usage__mobile {
   display: none; }
 
-.about__list {
+.usage__list {
   width: 100%;
   margin: 0 auto; }
 
-.about__item {
+.usage__item {
   width: 300px;
   height: 397px;
   float: left;
@@ -410,10 +461,10 @@ table {
   display: block;
   color: #fff; }
 
-.about__item:last-child {
+.usage__item:last-child {
   margin-right: 0; }
 
-.about__item__wrapper {
+.usage__item__wrapper {
   position: absolute;
   top: 0;
   height: 100%;
@@ -423,7 +474,7 @@ table {
   background: -ms-linear-gradient(transparent, rgba(0, 0, 0, 0.6));
   border-radius: 5px; }
 
-.about__item__num {
+.usage__item__num {
   display: inline-block;
   margin-left: 2px;
   padding: 7px 12px 5px 14px;
@@ -434,33 +485,49 @@ table {
   letter-spacing: 1.8px;
   text-transform: uppercase; }
 
-.about__item__num--second {
+.usage__item__num--second {
   margin-top: 30px;
   margin-left: 0; }
 
-.about__item__title {
+.usage__item__title {
   margin-top: 15px;
   margin-bottom: 15px;
   font-size: 24px;
   line-height: 1.2; }
 
-.about__item__text {
+.usage__item__text {
   color: #ccc;
   font-family: Roboto;
   font-size: 14px;
   line-height: 16px; }
 
-.about__item__text--second {
+.usage__item__text--second {
   margin-top: -3px; }
 
+  .usage__item__step {
+    display: inline-block;
+    margin-left: 2px;
+    padding: 7px 12px 5px 14px;
+    background: #ff4e50;
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: 10px;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+  }
+
 .partners {
+  clear: both;
   width: 63.5%;
   height: 367px;
-  margin: 0 auto;
   font-family: Montserrat;
   text-align: center; }
-
+.partners__wrapper {
+  margin: 100px auto;
+  width: 940px;
+}
 .partners__title {
+  margin-top: 500px;
   margin-left: -3px;
   margin-bottom: 32px;
   color: #333;
@@ -585,16 +652,19 @@ table {
   width: 87.5%;
   height: 187px;
   margin: 0 auto;
-  color: #333;
-  text-align: center; }
-
+  color: #333; }
+.search__wrapper{
+  margin: 0 auto;
+  text-align: center;
+}
 .search__title {
   font-family: Montserrat;
   font-size: 22px;
   line-height: 25px; }
 
 .search__text {
-  margin: 35px 0 28px;
+  margin: 35px auto;
+  width:  900px;
   font-family: Roboto;
   font-size: 18px; }
 
@@ -633,10 +703,15 @@ table {
   outline: 0; }
 
 footer {
+  clear: both;
+  margin: 1500px auto;
   width: 100%;
   margin-top: 68px;
   border-top: 4px solid #ff4e50; }
-
+.footer__wrapper{
+  margin: 100px auto;
+  width: 940px;
+}
 .footer__block {
   margin: 0 17.3%;
   padding-top: 37px; }
@@ -689,13 +764,13 @@ footer {
   display: block;
   text-align: center; }
 
-.about__item {
+.usage__item {
   width: 30%; }
 
-.about__item__wrapper {
+.usage__item__wrapper {
   padding: 210px 10px 5px 20px; }
 
-.about__item__text {
+.usage__item__text {
   color: #fff; }
 
 .partners__item {
