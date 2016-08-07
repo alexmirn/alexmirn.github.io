@@ -125,7 +125,7 @@ table {
 @font-face {
   font-family: 'Montserrat';
   src: url("../fonts/montserrat-regular-webfont.eot");
-  src: url("../fonts/montserrat-regular-webfont.eot?#iefix") format("embedded-opentype"), 
+  src: local('☺'), url("../fonts/montserrat-regular-webfont.eot?#iefix") format("embedded-opentype"), 
   url("../fonts/montserrat-regular-webfont.woff2") format("woff2"), 
   url("../fonts/montserrat-regular-webfont.woff") format("woff"), 
   url("../fonts/montserrat-regular-webfont.ttf") format("truetype"), 
@@ -136,7 +136,7 @@ table {
 @font-face {
   font-family: 'Montserrat';
   src: url("../fonts/montserrat-bold-webfont.eot");
-  src: url("../fonts/montserrat-bold-webfont.eot?#iefix") format("embedded-opentype"), 
+  src: local('☺'), url("../fonts/montserrat-bold-webfont.eot?#iefix") format("embedded-opentype"), 
   url("../fonts/montserrat-bold-webfont.woff2") format("woff2"), 
   url("../fonts/montserrat-bold-webfont.woff") format("woff"), 
   url("../fonts/montserrat-bold-webfont.ttf") format("truetype"), 
@@ -147,7 +147,7 @@ table {
 @font-face {
   font-family: 'Roboto';
   src: url("../fonts/roboto-thin-webfont.eot");
-  src: url("../fonts/roboto-thin-webfont.eot?#iefix") format("embedded-opentype"), 
+  src: local('☺'), url("../fonts/roboto-thin-webfont.eot?#iefix") format("embedded-opentype"), 
   url("../fonts/roboto-thin-webfont.woff2") format("woff2"), 
   url("../fonts/roboto-thin-webfont.woff") format("woff"), 
   url("../fonts/roboto-thin-webfont.ttf") format("truetype"), 
@@ -346,7 +346,7 @@ table {
   height: 700px;
   background: #1a1915;
   color: #fff;
-  font-family: Montserrat;
+  font-family: 'Montserrat';
   text-align: center; }
 
 .promo__wrapper {
@@ -411,7 +411,7 @@ table {
 
 .promo__info__text {
   margin: 20px 35%;
-  font-family: Roboto;
+  font-family: 'Roboto';
   font-size: 24px; }
 
 .promo__info__button {
@@ -434,7 +434,7 @@ table {
   margin: 97px auto;
   width: 940px;
   height: 457px;
-  font-family: Montserrat; }
+  font-family: 'Montserrat'; }
 .usage__wrapper{
   margin: 100px auto;
   width: 940px;
@@ -497,7 +497,7 @@ table {
 
 .usage__item__text {
   color: #ccc;
-  font-family: Roboto;
+  font-family: 'Roboto';
   font-size: 14px;
   line-height: 16px; }
 
@@ -520,7 +520,7 @@ table {
   clear: both;
   width: 63.5%;
   height: 367px;
-  font-family: Montserrat;
+  font-family: 'Montserrat';
   text-align: center; }
 .partners__wrapper {
   margin: 100px auto;
@@ -593,7 +593,7 @@ table {
 
 .partners__item__text {
   color: #666;
-  font-family: Roboto;
+  font-family: 'Roboto';
   font-size: 14px;
   line-height: 1.2; }
 
@@ -620,7 +620,7 @@ table {
 .ideas__title {
   color: #333;
   margin: 0 13px 35px;
-  font-family: Montserrat;
+  font-family: 'Montserrat';
   font-size: 22px;
   line-height: 25px;
   text-align: center; }
@@ -643,7 +643,7 @@ table {
   top: 50%;
   left: 0;
   color: #fff;
-  font-family: Montserrat;
+  font-family: 'Montserrat';
   font-size: 22px;
   text-align: center;
   text-transform: capitalize; }
@@ -658,14 +658,14 @@ table {
   text-align: center;
 }
 .search__title {
-  font-family: Montserrat;
+  font-family: 'Montserrat';
   font-size: 22px;
   line-height: 25px; }
 
 .search__text {
   margin: 35px auto;
   width:  900px;
-  font-family: Roboto;
+  font-family: 'Roboto';
   font-size: 18px; }
 
 .search__field {
@@ -680,7 +680,7 @@ table {
   box-shadow: 0px 1px 0px 0px #eee;
   box-sizing: border-box;
   color: #999;
-  font-family: Roboto;
+  font-family: 'Roboto';
   font-size: 14px; }
 
 .search__button {
@@ -693,7 +693,7 @@ table {
   border-radius: 20px;
   color: #fff;
   cursor: pointer;
-  font-family: Montserrat;
+  font-family: 'Montserrat';
   font-size: 14px;
   font-weight: 700; }
   .search__button:hover {
@@ -719,7 +719,7 @@ footer {
 .footer__title {
   float: left;
   color: #ff4e50;
-  font-family: Montserrat;
+  font-family: 'Montserrat';
   font-size: 16px;
   font-weight: 700;
   letter-spacing: 1px;
@@ -734,13 +734,13 @@ footer {
 .footer__partners__title {
   margin-bottom: 12px;
   color: #333;
-  font-family: Montserrat;
+  font-family: 'Montserrat';
   font-size: 14px;
   text-align: center; }
 
 .footer__company__link {
   color: #666;
-  font-family: Roboto;
+  font-family: 'Roboto';
   font-size: 14px;
   line-height: 24px;
   text-decoration: none; }
@@ -754,7 +754,7 @@ footer {
 .footer__logo__title {
   margin: 2px 0 7px 30px;
   color: #ccc;
-  font-family: Montserrat;
+  font-family: 'Montserrat';
   font-size: 10px;
   letter-spacing: 1px;
   text-align: center;
