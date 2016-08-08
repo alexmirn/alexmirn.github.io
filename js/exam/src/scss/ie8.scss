@@ -350,6 +350,7 @@ table {
   text-align: center; }
 
 .promo__wrapper {
+  font-family: 'Montserrat';
   margin: 0 auto;
   text-align: center;
   width: 100%;
@@ -397,7 +398,8 @@ table {
 
 .promo__info {
   clear: both;
-  margin: 200px auto;
+  margin: 240px auto;
+  color: #fff;
   }
 
 .promo__header {
@@ -436,6 +438,7 @@ table {
   height: 457px;
   font-family: 'Montserrat'; }
 .usage__wrapper{
+  font-family: 'Montserrat';
   margin: 100px auto;
   width: 940px;
 }
@@ -525,6 +528,7 @@ table {
 .partners__wrapper {
   margin: 100px auto;
   width: 940px;
+  font-family: 'Montserrat';
 }
 .partners__title {
   margin-top: 500px;
@@ -576,16 +580,16 @@ table {
   margin-left: -40px; }
 
 .partners__item__symbol--tv {
-  background: url("../img/img1.png"); }
+  background: url("../img/partner_sign1.png"); }
 
 .partners__item__symbol--coffe {
-  background: url("../img/img2.png"); }
+  background: url("../img/partner_sign2.png"); }
 
 .partners__item__symbol--chem {
-  background: url("../img/img3.png"); }
+  background: url("../img/partner_sign3.png"); }
 
 .partners__item__symbol--plane {
-  background: url("../img/img4.png"); }
+  background: url("../img/partner_sign4.png"); }
 
 .partners__item__title {
   margin: 15px auto;

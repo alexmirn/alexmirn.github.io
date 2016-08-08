@@ -5,6 +5,12 @@ $(function () {
             autoControls: true
         });
 
+            //Works fine in IE9+, FF and Chrome. 
+//dataColumn = jQuery('.table-header div.rf-edt-hdr + div table table tbody > tr:nth-child(1) td:nth-child(1)');
+//headerColumn = jQuery('div.table-header > div.rf-edt-hdr table table > tbody > tr td:nth-child(1)');
+dataColumn = jQuery('.table-header div.rf-edt-hdr + div table table tbody > tr').eq(0).find('td').eq(0);
+headerColumn = jQuery('div.table-header > div.rf-edt-hdr table table > tbody > tr td').eq(0);
+        
         function grid() {
             var $grid = $('.grid');
             $grid.imagesLoaded(function () {
