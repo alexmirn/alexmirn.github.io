@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <title>Final Exam</title>
 
     
@@ -14,13 +15,20 @@
     <link rel="stylesheet" href="css/ie8.css">
     <![endif]-->
 
+    <!--[if lt IE 9]>
+   <style rel="stylesheet">
+      img {max-width: none;}
+   </style>
+<![endif]-->
+
     
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
     <script src="js/script.min.js"></script>
  
 
 </head>
 <body>
+    
 <div class="wrapper">
     <!-- PROMO -->
     <section class="promo">
@@ -260,19 +268,61 @@
     <section class="ideas">
         <h1 class="ideas__title">Discover holiday activity
             ideas</h1>
-
-        <script type="text/template" id="container">
+        <div id="container">
             <div class="grid">
-                <% for (var i = 0; i < 9; i++) { %>
-                <figure class="grid-item">
-                    <img src="<%= hits[i].webformatURL %>" alt="picture" class="ideas__pic__img"/>
-                    <figcaption class="ideas__pic__title"><%= hits[i].tags.split(', ')[1] %></figcaption>
-                </figure>
-                <% } %>
-            </div>
-        </script>
+                 <div class="grid-item">
+                    <img src="#" alt="picture" class="ideas__pic__img"/>  
+                    <!-- <figcaption class="ideas__pic__title"></figcaption>   -->
+                </div>
+                <div class="grid-item">
+                    <img src="#" alt="picture" class="ideas__pic__img"/>
+                    <!-- <figcaption class="ideas__pic__title"></figcaption>     -->
+                </div>
+                <div class="grid-item">
+                    <img src="#" alt="picture" class="ideas__pic__img"/>
+                    <!-- <figcaption class="ideas__pic__title"></figcaption>     -->
+                </div>
+                <div class="grid-item">
+                    <img src="#" alt="picture" class="ideas__pic__img"/>
+                    <!-- <figcaption class="ideas__pic__title"></figcaption>     -->
+                </div>
+                <div class="grid-item">
+                    <img src="#" alt="picture" class="ideas__pic__img"/>
+                    <!-- <figcaption class="ideas__pic__title"></figcaption>     -->
+                </div>
+                <div class="grid-item">
+                    <img src="#" alt="picture" class="ideas__pic__img"/>
+                    <!-- <figcaption class="ideas__pic__title"></figcaption>     -->
+                </div>
+                <div class="grid-item">
+                    <img src="#" alt="picture" class="ideas__pic__img"/>
+                    <!-- <figcaption class="ideas__pic__title"></figcaption>     -->
+                </div>
+                <div class="grid-item">
+                    <img src="#" alt="picture" class="ideas__pic__img"/>
+                    <!-- <figcaption class="ideas__pic__title"></figcaption>     -->
+                </div>
+                <div class="grid-item">
+                    <img src="#" alt="picture" class="ideas__pic__img"/>
+                    <!-- <figcaption class="ideas__pic__title"></figcaption>     -->
+                </div>
+            <!-- <img src="#" alt="picture" class="ideas__pic__img"/>    
+            <img src="#" alt="picture" class="ideas__pic__img"/>    
+            <img src="#" alt="picture" class="ideas__pic__img"/>    
+            <img src="#" alt="picture" class="ideas__pic__img"/>    
+            <img src="#" alt="picture" class="ideas__pic__img"/>    
+            <img src="#" alt="picture" class="ideas__pic__img"/>    
+            <img src="#" alt="picture" class="ideas__pic__img"/>    
+            <img src="#" alt="picture" class="ideas__pic__img"/> -->
+            </div>    
+        </div>
+        
     </section>
-
+          
+             <!-- <img src="<%= results[i].url %>" alt="picture" class="ideas__pic__img"/>    -->
+                    
+    
+                 
     <!-- SEARCH -->
     <section class="search">
         <div class="search__wrapper">
@@ -283,7 +333,6 @@
             <button class="search__button">Search partners</button>
         </div>
     </section>
-
     
     <!-- FOOTER -->
     <footer>
