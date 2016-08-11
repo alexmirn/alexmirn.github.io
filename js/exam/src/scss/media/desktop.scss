@@ -300,7 +300,6 @@
 	.ideas {
 	  width: 940px;
 	  margin: 100px auto 97px;
-	  /*position: relative;*/
 	}
 
 	.ideas__title {
@@ -314,13 +313,12 @@
 
 	.grid {
 	  width: 100%;
-	  /*position: relative;*/
 	}
 
 	.grid-item {
-	  width: 32%;
-	  margin-bottom: 20px;
-	  /*display: inline-block;*/
+	  width: 30%;
+	  margin-left: 10px;
+	  margin-bottom: 10px;
 	}
 
 	.ideas__pic__img {

@@ -10,7 +10,8 @@ $(function () {
             $grid.imagesLoaded(function () {
                 $grid.masonry({
                     itemSelector: '.grid-item',
-                    columnWidth: 10
+                    columnWidth: 10,
+                    gutter: 20
                 });
             });
         }
